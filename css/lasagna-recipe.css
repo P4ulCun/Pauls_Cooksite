@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(253,250,212);
+    color:rgb(85, 85, 85);
+    font-family:Brush Script MT,cursive;
+    margin:0px;
+    padding:0px;    
+  }
+
+
+  header{
+	background-color:orange;
+    color: white;
+	padding:20px;
+	text-align:left;
+	border-bottom:3px solid black;
+}
