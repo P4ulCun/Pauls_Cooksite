@@ -7,7 +7,7 @@ body {
     padding:0px;    
   }
 
-/* viewport height: 833 pt calcule */
+/* viewport height: 833 pt calcule laptop */
 
 #intro > img{
   height:111vh;
@@ -23,12 +23,14 @@ body {
   margin-right: auto;
   display:flex;
   justify-content: space-between;
-  position: sticky;
+  position: static;
   background-color: white;
   top:0;
   z-index: 100;
   border-bottom: 1px solid darkgrey;
 }
+/*culoare logo: #b98954*/
+/*sau #af6614*/
 .nav_container .logo{
   height:14vh;
   width:fit-content;
@@ -57,12 +59,11 @@ body {
   cursor:pointer;
   text-decoration: none;
   color:black;
-  background-color: aliceblue;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 .nav_container ul li a:hover{
-  background-color: rgb(217, 237, 255);
-  color: black;
+  color:#b98954;
 }
 
 /* dropdown styling */
@@ -75,9 +76,22 @@ body {
 }
 .nav_container ul li ul li a{
   white-space: nowrap;
+  background-color: rgb(54, 54, 52);
+  color:white;
+  border:1px solid black;
 }
 ul li:hover>ul{
   visibility: visible;
   opacity: 1;
   display: block;
 }
+
+/*emojis la navigation*/
+
+/* ul.menu li a:nth-child(1)::before{
+  content: url(../images/home.png);
+  transform: scale(.07);
+  width:100px;
+  height:100px;
+  display:block;
+} */
