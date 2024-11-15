@@ -9,11 +9,6 @@ body {
 
 /* viewport height: 833 pt calcule laptop */
 
-#intro > img{
-  height:111vh;
-  width:auto;
-}
-
 /* nav container setup */
 .nav_container{
   width:50%;
@@ -81,7 +76,9 @@ body {
   border:1px solid black;
 }
 .nav_container ul li ul li a:hover{
-  background-color: rgb(73, 73, 70);
+  /* background-color: rgb(73, 73, 70); */
+  background-color: #b98954;
+  color:white;
 }
 ul li:hover>ul{
   visibility: visible;
@@ -99,7 +96,127 @@ ul li:hover>ul{
   display:block;
 } */
 
+.main{
+  width:39%;
+  padding:0px;
+  margin-left: auto;
+  margin-right: auto;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: static;
+  background-color: white;
+  /* border: 1px solid black; */
+}
+.main #start h1{
+  color:black;
+  font-size: 50px;
+  padding:0;
+  font-weight: bold;
+  text-align: center
+}
+.main h3{
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+}
+/* 111vh */
+.main #intro img{ 
+  height:112vh; 
+  width:auto;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+.main #intro p{
+  display: block;
+  color: black;
+  font-size:18px;
+  /* padding: 10px 0; */
+}
+#intro :nth-child(2){
+  border-top:1px solid darkgrey;
+  padding-top: 10px;
+}
+#intro :nth-child(3){
+  border-bottom:1px solid darkgrey;
+  padding-bottom: 10px;
+}
+.main h1{
+  color:black;
+  font-size: 30px;
+}
+
+/*tabel ingrediente*/
+
+#ingredients table{
+  border-spacing: 0;
+  border-collapse:collapse;
+  width:100%;
+  border:1px solid darkgrey;
+}
+#ingredients table th{
+  text-align: left;
+  font-size: 23px;
+  padding:8px;
+}
+/*sa folosesc culoarea asta la taiat color:rgb(85, 85, 85);*/
+#ingredients table td{
+  color:black;
+  padding:8px;
+}
+#ingredients table p{
+  display:inline-block;
+  color:black;
+  font-size: 17px;
+  text-align: center;
+}
+#ingredients table p::before{
+  content:"🕑";
+}
+#ingredients table #serv::before{
+  content:"🍴";
+}
+
+/* preparation steps */
+
+#steps ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  counter-reset: list-item;
+}
+
+#steps ol li {
+  position: relative;
+  padding: 10px 0;
+  padding-left: 60px;
+  font-size: 18px;
+  line-height: 1.5;
+  counter-increment: list-item;
+}
+
+#steps ol li::before {
+  content: counter(list-item);
+  position: absolute;
+  left:0;
+  top: 50%;
+  transform: translateY(-50%); /*il mut pe axa y mai sus*/
+  width: 30px;
+  height: 30px;
+  background-color:#b98954; 
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px; /*centreaza*/
+  text-align: center;
+  border-radius: 50%; /* il fac cerc */
+}
+#steps ol li + li {
+  border-top: 1px solid darkgrey; 
+}
+
 /*footer styling*/
+
 .footer{
   background-color: #b98954;
   /*var cu grid*/
@@ -119,6 +236,7 @@ ul li:hover>ul{
   flex-direction: column; */
   border-top: 1px solid darkgrey;
   border-bottom: 1px solid darkgrey;
+  margin-top:30px;
 }
 .footer .item-1{
   grid-row-start: 1;
