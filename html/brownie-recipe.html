@@ -1,78 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF">
+        <meta charset="UTF-8">
         <title>Brownie</title>
         <link rel="icon" href="../images/brownie.png">
         <link rel="stylesheet" type="text/css" href="../css/brownie-recipe.css" media="(min-width: 600px)">
     </head>
     <body>
-        <nav id="navigation">
+        <nav class="nav_container" id="navigation">
             <!--logo in stanga-->
-            <img src="../images/bun_logo_1-removebg.png" alt="page logo">
-
+            <a href="homepage.html" class="logo">
+                <img src="../images/bun_logo_1-removebg.png" alt="page logo">
+            </a>
             <ul class="menu">
-                <li><a href="/homepage.html">Home</a></li>
+                <li><a href="homepage.html">Home</a></li>
                 <li>
-                    <p>Recipes</p>
+                    <a>Recipes</a>
                     <ul class="submenu">
-                        <li><a href=" ">Reteta1</a></li>
-                        <li><a href=" ">Reteta2</a></li>
+                        <li><a href="./shakshuka-recipe.html">Shakshuka</a></li>
+                        <li><a href="./lasagna-recipe.html">Lasagna</a></li>
                     </ul>
                 </li>
                 <li>
-                    <p>Jump to</p>
+                    <a>Jump to</a>
                     <ul class="submenu">
-                        <li><a href=" ">Top of the page</a></li>
-                        <li><a href=" ">Ingredients</a></li>
-                        <li><a href=" ">Preparation steps</a></li>
-                        <li><a href=" ">Video</a></li>
-                        <li><a href=" ">Galery</a></li>
+                        <li><a href="#ingredients">Ingredients</a></li>
+                        <li><a href="#steps">Preparation steps</a></li>
+                        <li><a href="#video">Video</a></li>
+                        <li><a href="#galery">Galery</a></li>
                     </ul>
                 </li>
-                <li><a href=" ">Measurements</a></li>
+                <li><a href="./measurements.html">Measurements</a></li>
             </ul>
         </nav>
 
-        <header id="start">
-            <h1>Brownie</h1>
-            <h3>The perfect recipe for rich, chocolately and fudgy brownies.</h3>
-        </header>
+        <main class="main">
+            <header id="start">
+                <h1>Brownie</h1>
+                <h3>The perfect recipe for rich, chocolately and fudgy brownies.</h3>
+            </header>
 
-        <section id="intro">
-            <img src="../images/brownie_image.jpg" alt="A delicious looking piece of brownie">
-            <p>Indulge in the ultimate chocolate treat with this rich and fudgy brownie recipe! Perfectly chewy on the edges and irresistibly gooey in the center, these homemade brownies are a chocolate lover’s dream come true. Whether you’re baking for a special occasion or just because, this simple recipe will have you enjoying delicious, bakery-style brownies right at home. Get ready to bring pure chocolate bliss to your kitchen!</p>
-        </section>
+            <section id="intro">
+                <img class ="responsive-image" src="../images/brownie_image.jpg" alt="A delicious looking piece of brownie">
+                <p>Indulge in the ultimate chocolate treat with this rich and fudgy brownie recipe! Perfectly chewy on the edges and irresistibly gooey in the center, these homemade brownies are a chocolate lover's dream come true. Whether you're baking for a special occasion or just because, this simple recipe will have you enjoying delicious, bakery-style brownies right at home.</p>
+                <p>Get ready to bring pure chocolate bliss to your kitchen!</p>
+            </section>
 
-        <section id="ingredients">
-            <ul>
-                <li>Black chocolate - 240g</li>
-                <li>Cocoa powder - 75g</li>
-                <li>Butter - 280g</li>
-                <li>Sugar - 400g</li>
-                <li>Brown sugar - 100g</li>
-                <li>Vanilla extract - 2 tsp</li>
-                <li>Salt - 2 pinches</li>
-                <li>Eggs - 6</li>
-                <li>Flour - 120g</li>
-              </ul>
-        </section>
+            <section id="ingredients">
+                <h1>Ingredients</h1>
+                <div class="responsive-table">
+                    <table border="1">
+                        <tr>
+                            <th colspan="2">Lasagna</th>
+                        </tr>
+                        <tr>
+                            <td><p><b>Prep Time:</b><br>30 mins</p></td>
+                            <td><p><b>Cook Time:</b><br>1 hour</p></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><p><b>Total Time:</b><br>1 hour 30 mins</p></td>
+                            <td><p id="serv"><b>Serving Size:</b><br>8 persons</p></td>
+                        </tr>
+                        
+                        <tr>
+                            <th colspan="2">Ingredients</th>
+                        </tr>
+                        <tr>
+                            <td>Black chocolate - 240g</td>
+                            <td>Vanilla extract - 2 tsp</td>
+                        </tr>
+                        <tr>
+                            <td>Cocoa powder - 75g</td>
+                            <td>Salt - 2 pinches</td>
+                        </tr>
+                        <tr>
+                            <td>Butter - 280g</td>
+                            <td>Eggs - 6</td>
+                        </tr>
+                        <tr>
+                            <td>Sugar - 400g</td>
+                            <td>Flour - 120g</td>
+                        </tr>
+                        <tr>
+                            <td>Brown sugar - 100g</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </table>
+                    </div>
+            </section>
 
-        <section id="steps">
-            <ol class="style1">
-                <li>Melt the butter. In the meantime cut the chocolate finely and add it in a bowl with 25g of cocoa powder. Add the melted butter and wisk until smooth</li>
-                <li>In a larger bowl add all the sugar, the vanilla extract, the salt, one egg and mix. Then add 2 more eggs and mix. At last add the remaining eggs and mix for a few minutes.</li>
-                <li>Add the chocolate-butter mixture and mix. Now add the flour and 50g of cocoa powder and mix the batter lightly with a spatula.</li>
-                <li>Lastly, pop the mixture in the oven at 180°C for about 35 minutes for a fudgy consistency.</li>
-            </ol>
-        </section>
+            <section id="steps">
+                <h1>Preparation</h1>
+                <ol class="style1">
+                    <li>Melt the butter. In the meantime cut the chocolate finely and add it in a bowl with 25g of cocoa powder. Add the melted butter and wisk until smooth</li>
+                    <li>In a larger bowl add all the sugar, the vanilla extract, the salt, one egg and mix. Then add 2 more eggs and mix. At last add the remaining eggs and mix for a few minutes.</li>
+                    <li>Add the chocolate-butter mixture and mix. Now add the flour and 50g of cocoa powder and mix the batter lightly with a spatula.</li>
+                    <li>Lastly, pop the mixture in the oven at 180°C for about 35 minutes for a fudgy consistency.</li>
+                </ol>
+            </section>
 
-        <section id="video">
+            <section id="video">
+                <h1>Video</h1>
+                <p>Here's a short video of the recipe to help you out:</p>
+                <div class="video-container">
+                    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/VvJm4pQZ04s" title="The Best Brownies You&#39;ll Ever Eat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
 
-        </section>
+            <section id="galery">
+                <h1>Galery</h1>
+            </section>
+        </main>
 
-        <section id="galery">
-            
-        </section>
+        <footer class="footer">
+            <div class="item-1">
+                <a href="homepage.html" class="logo">
+                    <img src="../images/bun_logo_3-removebg.png" alt="page logo">
+                </a>
+                <p>Welcome to Paul's Cooksite! This is a place where food lovers of all levels can explore, create, and enjoy the art of cooking. From quick weekday meals to decadent desserts, we bring you easy-to-follow recipes with a dash of inspiration. Our blog is filled with cooking tips, ingredient insights, and kitchen hacks to help you feel confident in the kitchen.</p>
+            </div>
+            <div class="item-2">
+                <h2>Bon Appétit!</h2>
+                <h3>And don't forget to follow us on:</h3>
+                <div class="sm-links">
+                    <a href=""><img src="../images/youtube.png" alt=""></a>
+                    <a href=""><img src="../images/instagram.png" alt=""></a>
+                    <a href=""><img src="../images/facebook.png" alt=""></a>
+                    <a href=""><img src="../images/github.png" alt=""></a>
+                </div>
+            </div>
+        </footer>
+        <aside><a href="#start">To the top!</a></aside>
     </body>
 </html>

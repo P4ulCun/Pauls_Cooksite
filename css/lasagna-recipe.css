@@ -11,6 +11,7 @@ body {
 
 /* nav container setup */
 .nav_container{
+  margin-top:2px;
   width:100%;
   padding:0px;
   height:14vh;
@@ -77,6 +78,10 @@ body {
   background-color:#b98954;
   color:white;
   border:1px solid black;
+  border-bottom: none;
+}
+.nav_container ul li ul li:last-child{
+  border-bottom:1px solid black;
 }
 .nav_container ul li ul li a:hover{
   /* background-color: rgb(73, 73, 70); */
@@ -123,13 +128,16 @@ ul li:hover>ul{
   font-size: 20px;
   font-style: italic;
   text-align: center;
+  border-bottom: 1px solid darkgrey;
 }
 /* 111vh */
 .main #intro img{ 
-  height:112vh; 
-  width:auto;
   margin-top:20px;
   margin-bottom: 20px;
+}
+.responsive-image{
+  width:100%;
+  height:auto;
 }
 .main #intro p{
   display: block;
@@ -232,6 +240,27 @@ ul li:hover>ul{
   border-top: 1px solid darkgrey; 
 }
 
+/*video styling*/
+#video p{
+  font-size: 18px;
+  border-top: 1px solid darkgrey;
+}
+.video-container{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+.responsive-iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /*footer styling*/
 
 .footer{
@@ -277,6 +306,9 @@ ul li:hover>ul{
 }
 .footer .item-1 .logo img{
   height:100%;
+}
+.logo img:hover{
+  transform: scale(1.1);
 }
 .footer .item-1 p{
   display:block;
