@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF">
+        <meta charset="UTF-8">
         <title>Shakshuka</title>
         <link rel="icon" href="../images/shakshuka.png">
-        <link rel="stylesheet" type="text/css" href="../css/brownie-recipe.css" media="(min-width: 600px)">
+        <link rel="stylesheet" type="text/css" href="../css/shakshuka-recipe.css" media="(min-width: 600px)">
     </head>
     <body>
-        <nav id="navigation">
+        <nav class="nav_container" id="navigation">
             <!--logo in stanga-->
-            <img src="../images/bun_logo_1-removebg.png" alt="page logo">
-
+            <a href="homepage.html" class="logo">
+                <img src="../images/bun_logo_1-removebg.png" alt="page logo">
+            </a>
+            
             <ul class="menu">
                 <li><a href="/homepage.html">Home</a></li>
                 <li>
-                    <p>Recipes</p>
+                    <a>Recipes</a>
                     <ul class="submenu">
                         <li><a href=" ">Reteta1</a></li>
                         <li><a href=" ">Reteta2</a></li>
                     </ul>
                 </li>
                 <li>
-                    <p>Jump to</p>
+                    <a>Jump to</a>
                     <ul class="submenu">
                         <li><a href=" ">Top of the page</a></li>
                         <li><a href=" ">Ingredients</a></li>
@@ -34,50 +36,101 @@
             </ul>
         </nav>
 
-        <header id="start">
-            <h1>Shakshuka</h1>
-            <h3>Very fast, very nutritious and very easy to make</h3>
-        </header>
+        <main class="main">
+            <header id="start">
+                <h1>Shakshuka</h1>
+                <h3>Very fast, very nutritious and very easy to make</h3>
+            </header>
 
-        <section id="intro">
-            <img src="../images/shakshuka_image.jpg" alt="A delicious looking shakshuka">
-            <p>Bring a taste of the Mediterranean to your kitchen with this vibrant shakshuka recipe! A delightful dish of poached eggs nestled in a spicy, savory tomato and pepper sauce, shakshuka is perfect for breakfast, brunch, or even dinner. Bursting with flavor and easy to make in just one pan, this warm, comforting meal pairs wonderfully with fresh bread for dipping. Follow along for a simple recipe that’s sure to become a favorite!</p>
-        </section>
+            <section id="intro">
+                <img src="../images/shakshuka_image.jpg" alt="A delicious looking shakshuka">
+                <p>Bring a taste of the Mediterranean to your kitchen with this vibrant shakshuka recipe! A delightful dish of poached eggs nestled in a spicy, savory tomato and pepper sauce, shakshuka is perfect for breakfast, brunch, or even dinner. Bursting with flavor and easy to make in just one pan, this warm, comforting meal pairs wonderfully with fresh bread for dipping.</p>
+                <p>Follow along for a simple recipe that's sure to become a favorite!</p>
+            </section>
 
-        <section id="ingredients">
-            <ul>
-                <li>Olive oil - 1 tablespoon </li>
-                <li>Onion - 1</li>
-                <li>Bell pepper - 1</li>
-                <li>Garlic - 3 cloves </li>
-                <li>Zucchini / Eggplant - 1</li>
-                <li>Mushrooms - 6</li>
-                <li>Tomato sauce - 350g </li>
-                <li>Salt</li>
-                <li>Pepper</li>
-                <li>Chilli flakes</li>
-                <li>Oregano</li>
-                <li>Basil</li>
-            </ul>
-        </section>
+            <section id="ingredients">
+                <h1>Ingredients</h1>
+                <div class="responsive-table">
+                    <table border="1">
+                        <tr>
+                            <th colspan="2">Lasagna</th>
+                        </tr>
+                        <tr>
+                            <td><p><b>Prep Time:</b><br>30 mins</p></td>
+                            <td><p><b>Cook Time:</b><br>1 hour</p></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><p><b>Total Time:</b><br>1 hour 30 mins</p></td>
+                            <td><p id="serv"><b>Serving Size:</b><br>8 persons</p></td>
+                        </tr>
+                        
+                        <tr>
+                            <th colspan="2">Ingredients</th>
+                        </tr>
+                        <tr>
+                            <td>Olive oil - 1 tablespoon</td>
+                            <td>Tomato sauce - 350g</td>
+                        </tr>
+                        <tr>
+                            <td>Onion - 1</td>
+                            <td>Salt</td>
+                        </tr>
+                        <tr>
+                            <td>Bell pepper - 1</td>
+                            <td>Pepper</td>
+                        </tr>
+                        <tr>
+                            <td>Garlic - 3 cloves</td>
+                            <td>Chilli flakes</td>
+                        </tr>
+                        <tr>
+                            <td>Zucchini / Eggplant - 1</td>
+                            <td>Basil</td>
+                        </tr>
+                    </table>
+                    </div>
+            </section>
 
-        <section id="steps">
-            <ol>
-                <li>Cut all the vegetables.</li>
-                <li>Saute the onion, bell pepper, and garlic with a little bit of extra virgin olive oil.</li>
-                <li>Once softened, add the mushrooms and zucchini/eggplant and continue stirring.</li>
-                <li>Add the tomato sauce and the aromatics and let it simmer for about 5 minutes.. </li>
-                <li>When the sauce is ready, use the back of a spoon and make some holes in the sauce. </li>
-                <li>Crack your eggs and nestle each egg in one of the holes you created. Cover the skillet and allow the eggs to simmer in the sauce over medium-low heat until the egg whites have settled.</li>
-            </ol>
-        </section>
+            <section id="steps">
+                <h1>Preparation</h1>
+                <ol>
+                    <li>Cut all the vegetables.</li>
+                    <li>Saute the onion, bell pepper, and garlic with a little bit of extra virgin olive oil.</li>
+                    <li>Once softened, add the mushrooms and zucchini/eggplant and continue stirring.</li>
+                    <li>Add the tomato sauce and the aromatics and let it simmer for about 5 minutes.. </li>
+                    <li>When the sauce is ready, use the back of a spoon and make some holes in the sauce. </li>
+                    <li>Crack your eggs and nestle each egg in one of the holes you created. Cover the skillet and allow the eggs to simmer in the sauce over medium-low heat until the egg whites have settled.</li>
+                </ol>
+            </section>
 
-        <section id="video">
+            <section id="video">
 
-        </section>
+            </section>
 
-        <section id="galery">
-            
-        </section>
+            <section id="galery">
+                
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="item-1">
+                <a href="homepage.html" class="logo">
+                    <img src="../images/bun_logo_3-removebg.png" alt="page logo">
+                </a>
+                <p>Welcome to Paul's Cooksite! This is a place where food lovers of all levels can explore, create, and enjoy the art of cooking. From quick weekday meals to decadent desserts, we bring you easy-to-follow recipes with a dash of inspiration. Our blog is filled with cooking tips, ingredient insights, and kitchen hacks to help you feel confident in the kitchen.</p>
+            </div>
+            <div class="item-2">
+                <h2>Bon Appétit!</h2>
+                <h3>And don't forget to follow us on:</h3>
+                <div class="sm-links">
+                    <a href=""><img src="../images/youtube.png" alt=""></a>
+                    <a href=""><img src="../images/instagram.png" alt=""></a>
+                    <a href=""><img src="../images/facebook.png" alt=""></a>
+                    <a href=""><img src="../images/github.png" alt=""></a>
+                </div>
+            </div>
+        </footer>
+        <aside><a href="">To the top!</a></aside>
     </body>
 </html>
