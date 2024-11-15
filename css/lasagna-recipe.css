@@ -162,12 +162,25 @@ ul li:hover>ul{
   text-align: left;
   font-size: 23px;
   padding:8px;
+  background-color: #b98954;
+  color: white;
 }
 /*sa folosesc culoarea asta la taiat color:rgb(85, 85, 85);*/
+#responsive-table{
+  overflow-x: auto;
+}
 #ingredients table td{
   color:black;
   padding:8px;
 }
+#ingredients table tr:nth-child(even){
+  background-color: lightgrey;
+}
+#ingredients table tr:hover{
+  /* background-color: rgb(170, 170, 170); */
+  background-color: darkgrey;
+}
+
 #ingredients table p{
   display:inline-block;
   color:black;
