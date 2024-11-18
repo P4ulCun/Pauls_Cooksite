@@ -5,9 +5,7 @@ body {
     font-family:Comic Sans MS;
     margin:0px;
     padding:0px;    
-  }
-
-/* viewport height: 833 pt calcule laptop */
+}
 
 /* nav container setup */
 .nav_container{
@@ -102,201 +100,53 @@ ul li:hover>ul{
   display: block;
 }
 
-/*emojis la navigation*/
-
-/* ul.menu li a:nth-child(1)::before{
-  content: url(../images/home.png);
-  transform: scale(.07);
-  width:100px;
-  height:100px;
-  display:block;
-} */
+/*main-container styling */
 
 .main{
-  width:39%;
-  padding:0px;
-  margin-left: auto;
-  margin-right: auto;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: static;
-  background-color: white;
-  /* border: 1px solid black; */
+    width:39%;
+    padding:0px;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: static;
+    background-color: white;
+    /* border: 1px solid black; */
 }
 .main #start h1{
-  color:black;
-  font-size: 50px;
-  padding:0;
-  font-weight: bold;
-  text-align: center;
-  font-family: Gil Sans;
-}
-.main h3{
-  font-size: 20px;
-  font-style: italic;
-  text-align: center;
-  border-bottom: 1px solid darkgrey;
-}
-/* 111vh */
-.main #intro img{ 
-  margin-top:20px;
-  margin-bottom: 20px;
-}
-.responsive-image{
-  width:100%;
-  height:auto;
-}
-.main #intro p{
-  display: block;
-  color: black;
-  font-size:18px;
-  /* padding: 10px 0; */
-}
-#intro :nth-child(2){
-  border-top:1px solid darkgrey;
-  padding-top: 10px;
-}
-#intro :nth-child(3){
-  border-bottom:1px solid darkgrey;
-  padding-bottom: 10px;
-}
-.main h1{
-  color:black;
-  font-size: 30px;
+    color:black;
+    font-size: 50px;
+    padding:0;
+    font-weight: bold;
+    text-align: center;
+    font-family: Gil Sans;
 }
 
-/*tabel ingrediente*/
+/* table styling */
 
-#ingredients table{
-  border-spacing: 0;
-  border-collapse:collapse;
-  width:100%;
-  border:1px solid darkgrey;
+.main table{
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 18px;
+    color:black;
 }
-#ingredients table th{
-  text-align: left;
-  font-size: 23px;
-  padding:8px;
-  background-color: #b98954;
-  color: white;
+.main table tr td{
+    width: 50%;
 }
-/*sa folosesc culoarea asta la taiat color:rgb(85, 85, 85);*/
-#responsive-table{
-  overflow-x: auto;
+.category{
+    font-size: 24px;
+    font-weight: bold;
+    color:black;
+    text-align: center;
+    background-color: #b98954;
 }
-#ingredients table td{
-  color:black;
-  padding:8px;
-}
-#ingredients table tr:nth-child(even){
+.main table tr:nth-child(odd){
   background-color: lightgrey;
 }
-#ingredients table tr:hover{
-  /* background-color: rgb(170, 170, 170); */
-  background-color: darkgrey;
+.sub-category{
+    background-color: #b98954;
 }
-
-#ingredients table p{
-  display:inline-block;
-  color:black;
-  font-size: 17px;
-  text-align: center;
-}
-#ingredients table p::before{
-  content:"🕑";
-}
-#ingredients table #serv::before{
-  content:"🍴";
-}
-
-/* preparation steps */
-
-#steps ol {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-  counter-reset: list-item;
-}
-
-#steps ol li {
-  position: relative;
-  padding: 10px 0;
-  padding-left: 60px;
-  font-size: 18px;
-  line-height: 1.5;
-  counter-increment: list-item;
-}
-
-#steps ol li::before {
-  content: counter(list-item);
-  position: absolute;
-  left:0;
-  top: 50%;
-  transform: translateY(-50%); /*il mut pe axa y mai sus*/
-  width: 30px;
-  height: 30px;
-  background-color:#b98954; 
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 30px; /*centreaza*/
-  text-align: center;
-  border-radius: 50%; /* il fac cerc */
-}
-#steps ol li + li {
-  border-top: 1px solid darkgrey; 
-}
-
-/*video styling*/
-#video p{
-  font-size: 18px;
-  border-top: 1px solid darkgrey;
-}
-.video-container{
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%;
-}
-.responsive-iframe{
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* galery styling */
-
-.galery-container{
-  display:grid;
-  grid-template-rows: 25% 25% 25% 25%;
-  grid-template-columns: 49% 49%;
-  grid-template-areas: 
-    'a b'
-    'a b'
-    'c d'
-    'c d';
-  column-gap: 15px;
-  row-gap: 5px;
-  width:100%;
-}
-.image1{
-  grid-area:a;
-}
-.image2{
-  grid-area:b;
-}
-.image3{
-  grid-area:c;
-}
-.image4{
-  grid-area:d;
-}
-
 /*footer styling*/
 
 .footer{
