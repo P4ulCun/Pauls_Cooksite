@@ -1,15 +1,16 @@
 body {
-    /* background-color: rgb(253,250,212); */
-    background-color: white;
-    color:rgb(85, 85, 85);
-    font-family:Comic Sans MS;
-    margin:0px;
-    padding:0px;    
-  }
+  /* background-color: rgb(253,250,212); */
+  background-color: white;
+  color:rgb(85, 85, 85);
+  font-family:Comic Sans MS;
+  margin:0px;
+  padding:0px;    
+}
 
 /* viewport height: 833 pt calcule laptop */
 
 /* nav container setup */
+
 .nav_container{
   margin-top:2px;
   width:100%;
@@ -22,7 +23,7 @@ body {
   position: static;
   background-color: white;
   top:0;
-  z-index: 100;
+  z-index: 10000;
   border-bottom: 1px solid darkgrey;
 }
 /*culoare logo: #b98954*/
@@ -60,11 +61,13 @@ body {
   text-transform: uppercase;
   font-size: 17px;
   font-weight: bold;
+  border: 1px solid red;
 }
 .nav_container ul li a div {
   display: block;
   position: relative;
   transition: transform 0.3s, color 0.3s;
+  border: 1px solid black;
 }
 .nav_container ul li a div:hover{
   transform: scale(1.1);
@@ -124,7 +127,7 @@ ul li:hover>ul{
   background-color: white;
   /* border: 1px solid black; */
 }
-.main #start h1{
+.main > #start > h1{
   color:black;
   font-size: 50px;
   padding:0;
@@ -139,7 +142,7 @@ ul li:hover>ul{
   border-bottom: 1px solid darkgrey;
 }
 /* 111vh */
-.main #intro img{ 
+.main > #intro > img{ 
   margin-top:20px;
   margin-bottom: 20px;
 }
@@ -147,10 +150,11 @@ ul li:hover>ul{
   width:100%;
   height:auto;
 }
-.main #intro p{
+.main #intro h4{
   display: block;
   color: black;
   font-size:18px;
+  font-weight: normal;
   /* padding: 10px 0; */
 }
 #intro :nth-child(2){
@@ -161,13 +165,17 @@ ul li:hover>ul{
   border-bottom:1px solid darkgrey;
   padding-bottom: 10px;
 }
-.main h1{
+.main h2{
   color:black;
   font-size: 30px;
 }
 
 /*tabel ingrediente*/
 
+.border1, .border1 th, .border1 td
+{
+  border: 1px solid black;
+}
 #ingredients table{
   border-spacing: 0;
   border-collapse:collapse;
@@ -367,6 +375,17 @@ ul li:hover>ul{
   align-items: center;
   padding: 10px;
 }
+
+.sm-links a {
+  cursor: pointer;
+  transition: transform 0.7s ease-in-out 0.2s, opacity 0.3s ease 0.9s;
+}
+.sm-links a:hover {
+  transform: scale(1.2) rotate(360deg); 
+  opacity: 0.7; 
+}
+
+
 .sm-links a img {
   width: 40px; 
   height: 40px; 
@@ -386,4 +405,21 @@ aside a{
 }
 aside a:hover{
   color:#b98954;
+}
+
+@media screen and (max-width: 830px){
+  .nav_container{
+    flex-flow: column;
+    height:100%;
+    border: 1px solid black;
+  }
+  a{
+    border:1px solid red;
+  }
+  .main{
+    width:80%;
+  }
+  footer h2, footer h3{
+    transform: scale(0.9);
+  }
 }
