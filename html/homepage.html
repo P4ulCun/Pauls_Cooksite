@@ -1,18 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF">
+        <meta charset="UTF-8">
         <title>Homepage</title>
-        <!--enter favicon-->
-        <link rel="stylesheet" type="text/css" href="homepage.css" media="(min-width: 600px)">
+        <link rel="icon" href="../images/cutlery.png">
+        <link rel="stylesheet" type="text/css" href="../css/homepage.css" media="(min-width: 600px)">
     </head>
     <body>
-        <nav id="navigation">
-            <!--logo in stanga si bara de navigare in dreapta-->
+        <nav class="nav_container" id="navigation">
+            <a href="homepage.html" class="logo">
+                <img src="../images/bun_logo_1-removebg.png" alt="page logo">
+            </a>
+            <ul class="menu">
+                <li><a href="homepage.html"><div>Home</div></a></li>
+                <li>
+                    <a><div>Recipes</div></a>
+                    <ul class="submenu">
+                        <li><a href="./shakshuka-recipe.html"><div>Shakshuka</div></a></li>
+                        <li><a href="./brownie-recipe.html"><div>Brownie</div></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a><div>Jump to</div></a>
+                    <ul class="submenu">
+                        <li><a href="#ingredients"><div>Ingredients</div></a></li>
+                        <li><a href="#steps"><div>Preparation steps</div></a></li>
+                        <li><a href="#video"><div>Video</div></a></li>
+                        <li><a href="#galery"><div>Galery</div></a></li>
+                    </ul>
+                </li>
+                <li><a href="./measurements.html"><div>Measurements</div></a></li>
+            </ul>
         </nav>
-        
-        <header id="start">
-            <!--dupa vine un header cu bordereuri sus jos cu titlul retetei-->
+
+        <header class="hero">
+            <div class="overlay">
+                <h1 class="title">Delicious Bites</h1>
+                <p class="subtitle">Your daily dose of culinary inspiration</p>
+            </div>
         </header>
+    
+        <main>
+            <section class="intro">
+                <h2>Welcome to Delicious Bites</h2>
+                <p>
+                    Explore mouthwatering recipes, cooking tips, and food stories to elevate your home cooking.
+                    Whether you're a beginner or a seasoned chef, we've got something special for everyone.
+                </p>
+            </section>
+    
+            <section class="featured-recipes">
+                <h2>Featured Recipes</h2>
+                <div class="recipe-grid">
+                    <div class="recipe-card">
+                        <img src="recipe1.jpg" alt="Recipe 1">
+                        <h3>Spaghetti Carbonara</h3>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="recipe2.jpg" alt="Recipe 2">
+                        <h3>Classic Cheesecake</h3>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="recipe3.jpg" alt="Recipe 3">
+                        <h3>Avocado Toast</h3>
+                    </div>
+                </div>
+            </section>
     </body>
 </html>
