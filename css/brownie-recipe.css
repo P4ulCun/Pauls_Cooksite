@@ -402,41 +402,40 @@ text-decoration: none;
 cursor:pointer;
 color:black;
 }
-aside a:hover{
-  color:#b98954;
-}
 .animation-box{
-  margin-top:30px;
+  /* margin-top:30px;
   margin-bottom: 30px;
   margin-left:auto;
-  margin-right: auto;
+  margin-right: auto; */
+  margin: 30px auto;
   width: 100px;
   height: 100px;
-  animation: multiEffect 3s infinite;
+  animation: animatie 3s infinite;
   border-radius: 10px;
   background-color: #b98954;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* animations */
 
-@keyframes multiEffect {
+@keyframes animatie {
   0% {
-    transform: rotate(0deg) scale(1); /* Fără rotație, dimensiune normală */
-    background-color: #3498db; /* Albastru */
-	background-color:#b98954;
-    border-radius: 10px; /* Colțuri rotunjite moderat */
+    transform: rotate(0deg) scale(1);
+	  background-color:#b98954;
+    border-radius: 10px;
   }
   50% {
-    transform: rotate(180deg) scale(1.5); /* Rotire 180°, dimensiune mărită */
-    background-color: #e74c3c; /* Roșu */
+    transform: rotate(180deg) scale(1.5);
 	background-color:darkgrey;
-    border-radius: 50%; /* Cerc complet */
+    border-radius: 50%;
   }
   100% {
-    transform: rotate(360deg) scale(1); /* Rotire completă, dimensiune normală */
-    background-color: #3498db; /* Revenire la albastru */
-	background-color:#b98954;
-    border-radius: 10px; /* Revenire la colțuri rotunjite moderate */
+    transform: rotate(360deg) scale(1);
+	  background-color:#b98954;
+    border-radius: 10px;
   }
 }
 
@@ -450,6 +449,11 @@ aside a:hover{
 }
 
 /* responsive */
+@media screen and (max-width: 1100px){
+  .main{
+    width: 55%;
+  }
+}
 
 @media screen and (max-width: 830px){
   .nav_container{
@@ -465,5 +469,10 @@ aside a:hover{
   }
   footer h2, footer h3{
     transform: scale(0.9);
+  }
+  .animation-box{
+    margin: 20px auto;
+    width: 70px;
+    height: 70px;
   }
 }
