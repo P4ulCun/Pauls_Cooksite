@@ -48,7 +48,6 @@ body {
 }
 .nav_container ul li a{
   display: block;
-  padding:0 40px;
   height:100%;
   line-height:7vh;
   cursor:pointer;
@@ -63,6 +62,7 @@ body {
   display: block;
   position: relative;
   transition: transform 0.3s, color 0.3s;
+  padding: 0 40px;
 }
 .nav_container ul li a div:hover{
   transform: scale(1.1);
@@ -297,15 +297,24 @@ aside a{
   .nav_container{
     flex-flow: column;
     height:100%;
-    border: 1px solid black;
   }
-  a{
-    border:1px solid red;
+  .nav_container ul li a div{
+    display: block;
+    position: relative;
+    padding: 0 18px;
+  }
+  .menu{
+    padding-right: 19px;
   }
   .main{
     width:80%;
   }
   footer h2, footer h3{
     transform: scale(0.9);
+  }
+  .animation-box{
+    margin: 20px auto;
+    width: 70px;
+    height: 70px;
   }
 }

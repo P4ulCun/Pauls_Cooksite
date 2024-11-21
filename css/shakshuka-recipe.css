@@ -13,8 +13,8 @@ body {
 .nav_container{
 margin-top:2px;
 width:100%;
-padding:0px;
 height:14vh;
+padding: 0;
 margin-left: auto;
 margin-right: auto;
 display:flex;
@@ -50,7 +50,6 @@ position: relative;
 }
 .nav_container ul li a{
 display: block;
-padding:0 40px;
 height:100%;
 line-height:7vh;
 cursor:pointer;
@@ -65,6 +64,7 @@ font-weight: bold;
   display: block;
   position: relative;
   transition: transform 0.3s, color 0.3s;
+  padding: 0 40px;
 }
 .nav_container ul li a div:hover{
   transform: scale(1.1);
@@ -305,6 +305,10 @@ border-top: 1px solid darkgrey;
 .image4{
   grid-area:d;
 }
+#galery h2{
+  border-bottom:1px solid darkgrey;
+  padding-bottom: 10px;
+}
 
 /*footer styling*/
 
@@ -455,15 +459,24 @@ color:black;
   .nav_container{
     flex-flow: column;
     height:100%;
-    border: 1px solid black;
   }
-  a{
-    border:1px solid red;
+  .nav_container ul li a div{
+    display: block;
+    position: relative;
+    padding: 0 18px;
+  }
+  .menu{
+    padding-right: 19px;
   }
   .main{
     width:80%;
   }
   footer h2, footer h3{
     transform: scale(0.9);
+  }
+  .animation-box{
+    margin: 20px auto;
+    width: 70px;
+    height: 70px;
   }
 }
