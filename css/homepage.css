@@ -320,6 +320,13 @@ aside a{
   footer h2, footer h3{
     transform: scale(0.9);
   }
+  .footer .item-1 .logo{
+    height:16vh;
+    }
+  .footer .item-1 p{
+    width:70%;
+    margin-left: 17%;
+    }
   .animation-box{
     margin: 20px auto;
     width: 70px;
