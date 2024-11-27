@@ -21,7 +21,7 @@ display:flex;
 justify-content: space-between;
 position: static;
 background-color: white;
-top:0;
+top:0; /* pentru position: absolute */
 z-index: 100;
 border-bottom: 1px solid darkgrey;
 }
@@ -37,6 +37,7 @@ margin-left: 20px;
 .nav_container .logo img{
 height:100%;
 transition: transform 0.3s;
+/* linia 364 */
 }
 .nav_container ul{
 height:50%;
@@ -246,7 +247,7 @@ background-color:#b98954;
 color: white;
 font-weight: bold;
 font-size: 18px;
-line-height: 30px; /*centreaza*/
+line-height: 30px; /* centreaza cifra*/
 text-align: center;
 border-radius: 50%; /* il fac cerc */
 }
@@ -263,7 +264,7 @@ border-top: 1px solid darkgrey;
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-top: 56.25%;
+  padding-top: 56.25%; /* aspect ratio 16:9 */
 }
 .responsive-iframe{
   position: absolute;
@@ -433,8 +434,8 @@ color:black;
   }
   50% {
     transform: rotate(180deg) scale(1.5);
-	background-color:darkgrey;
-    border-radius: 50%;
+	  background-color:darkgrey;
+    border-radius: 50%; /* cerc */
   }
   100% {
     transform: rotate(360deg) scale(1);
