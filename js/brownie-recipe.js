@@ -39,13 +39,14 @@ let availableKeywords = [
 
 const resultBox = document.querySelector(".result-box");
 const inputBox = document.querySelector("#input-box");
+const searchContainer = document.querySelector(".search-container");
 
 // check if the input is in the name parameters of list
 function isInNames(value) {
     let n = 0;
     let result = [];
     while (n != availableKeywords.length) {
-        let isInText = availableKeywords[n].name.includes(value);
+        let isInText = availableKeywords[n].name.toLowerCase().includes(value);
         if (isInText) {
             result.push(availableKeywords[n].name);
         }
@@ -62,10 +63,26 @@ inputBox.onkeyup = function () {
         //     return keyword.toLowerCase().includes(input.toLowerCase());
         // });
         // result = availableKeywords.filter(isInNames);
-        result = isInNames(input);
+        result = isInNames(input.toLowerCase());
         if (!result.length) {
             result.push("No matches for your search");
         }
         console.log(result);
     }
+    displaySearchResult(result);
+}
+
+function displaySearchResult(result) {
+    if(!result.length) {
+        result.innerHTML = '';
+        searchContainer.style.height = "51px";
+    }
+    else {
+        searchContainer.style.height = "fit-content";
+    }
+    const content = result.map((list)=>{
+        return "<li>" + list + "</li>";
+    });
+
+    resultBox.innerHTML = "<ul>" + content.join('') + "</ul>";
 }
