@@ -1,50 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <meta charset="UTF-8">
         <title>Brownie</title>
         <link rel="icon" href="../images/brownie.png">
         <link rel="stylesheet" type="text/css" href="../css/brownie-recipe.css">
-        <script src="../js/brownie-recipe.js"></script>
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"> -->
     </head>
     <body>
-        <script>
-            const toggleBtn = document.getElementById('toggle-nav-burger');
-const menuItems = document. querySelector('.menu-item');
-
-toggleBtn.addEventListener('click', () =>{
-    menuItems.classList.toggle('.responsive');
-})
-        </script>
-
         <nav class="nav_container" id="navigation">
             <!--logo in stanga-->
             <a href="homepage.html" class="logo">
                 <img src="../images/bun_logo_1-removebg.png" alt="page logo">
             </a>
             <div class="nav-burger">
-                <button id="toggle-nav-burger"></button>
+                <button id="nav-button"></button>
             </div>
-            <ul class="menu">
-                <li class="menu-item"><a href="homepage.html"><div>Home</div></a></li>
+            <div class="menu">
+            <ul>
+                <li><a href="homepage.html"><div>Home</div></a></li>
                 <li>
                     <a><div>Recipes</div></a>
                     <ul class="submenu-recipes">
-                        <li class="menu-item"><a href="./shakshuka-recipe.html"><div>Shakshuka</div></a></li>
-                        <li class="menu-item"><a href="./lasagna-recipe.html"><div>Lasagna</div></a></li>
+                        <li><a href="./shakshuka-recipe.html"><div>Shakshuka</div></a></li>
+                        <li><a href="./lasagna-recipe.html"><div>Lasagna</div></a></li>
                     </ul>
                 </li>
                 <li>
                     <a><div>Jump to</div></a>
                     <ul class="submenu">
-                        <li class="menu-item"><a href="#ingredients"><div>Ingredients</div></a></li>
-                        <li class="menu-item"><a href="#steps"><div>Preparation steps</div></a></li>
-                        <li class="menu-item"><a href="#video"><div>Video</div></a></li>
-                        <li class="menu-item"><a href="#galery"><div>Galery</div></a></li>
+                        <li><a href="#ingredients"><div>Ingredients</div></a></li>
+                        <li><a href="#steps"><div>Preparation steps</div></a></li>
+                        <li><a href="#video"><div>Video</div></a></li>
+                        <li><a href="#galery"><div>Galery</div></a></li>
                     </ul>
                 </li>
                 <li><a href="./measurements.html"><div>Measurements</div></a></li>
             </ul>
+            </div>
         </nav>
 
         <main class="main">
@@ -167,4 +161,6 @@ toggleBtn.addEventListener('click', () =>{
             </div>
         </aside>
     </body>
+
+    <script src="../js/brownie-recipe.js"></script>
 </html>
