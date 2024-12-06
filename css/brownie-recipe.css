@@ -436,7 +436,17 @@ color:black;
   width:7vh;
   border:none;
   display:none;
+  /* border:1px solid black; */
 }
+.search-box button{
+  background: url('../images/magnifying-glass.png') no-repeat center/cover;
+  width: 5vh;
+  height: 5vh;
+  border: none;
+  display: none;
+  /* border:1px solid black; */
+}
+
 .menu{
   align-self:center;
 }
@@ -571,6 +581,25 @@ color:black;
   .menu{
     display: none;
   }
+
+  .search-container{
+    width: 230px;
+    height: fit-content;
+    border-radius: 5px;
+    /* border: 1px solid darkgrey; */
+    display: inline-block;
+    /* flex-flow: column; */
+    /* align-items: center; */
+    margin-top: 4.5vh;
+    margin-left: 2%;
+    background-color: white;
+
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 100000;
+    position: fixed;
+    left: 50%;
+  }
 }
 
 @media screen and (max-width: 1100px){
@@ -594,7 +623,7 @@ color:black;
   position: relative;
   top: 0;
   z-index:10000;
-  }
+}
 }
 
 @media screen and (max-width: 830px){
@@ -619,4 +648,44 @@ color:black;
     width: 70px;
     height: 70px;
   }
+
+  .search-container{
+    display: none;
+  }
+  .search-box button{
+    display: block;
+    position: absolute;
+    right:91px;
+    cursor: pointer;
+    /* border:1px solid black; */
+  }
+  .search-box{
+    padding-top:4vh;
+  }
+  .search-box button:active{
+    transform: scale(0.9);
+  }
 }
+
+@media screen and (max-width: 830px){
+  .responsive-search{
+    /* border:1px solid black; */
+    /* display: flex; */
+    position: absolute;
+    left:0px;
+    top: 14.4vh;
+    width: 99%;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 1000000;
+    background-color: white;
+    margin-left: 3px;
+  }
+  .responsive-search .row{
+    width: 100%;
+  }
+  .responsive-search #input-box{
+    /* padding-left: 50px; */
+    width: 100%;
+  }
+  }

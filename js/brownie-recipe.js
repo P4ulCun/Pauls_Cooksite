@@ -12,27 +12,41 @@ navButton.onclick = function() {
     }
 }
 
+// search dropdown functionality
+
+let searchBtn = document.getElementById("search-dropdown");
+let searchMenu = document.querySelector(".search-container");
+
+searchBtn.onclick = function() {
+    if (searchMenu.className === "search-container") {
+        searchMenu.className = "search-container, responsive-search";
+    }
+    else {
+        searchMenu.className = "search-container";
+    }
+}
+
 // search bar functionality
 
 let availableKeywords = [
     {
-        name: "lasagna recipe",
+        name: "Lasagna recipe",
         link: "./lasagna-recipe.html"
     },
     {
-        name: "brownie recipe",
+        name: "Brownie recipe",
         link: "./brownie-recipe.html"
     },
     {
-        name: "shakshuka recipe",
+        name: "Shakshuka recipe",
         link: "./shakshuka-recipe.html"
     },
     {
-        name: "lasagna ingredients",
+        name: "Lasagna ingredients",
         link: "./lasagna-recipe.html#ingredients"
     },
     {
-        name: "lasagna galery",
+        name: "Lasagna galery",
         link: "./lasagna-recipe.html#galery"
     }
 ];
@@ -72,17 +86,28 @@ inputBox.onkeyup = function () {
     displaySearchResult(result);
 }
 
+function makeList(resultName, resultLink) {
+    let content = [];
+    let n = 0;
+    while (n != resultName.length) {
+        content[n] = `<li><a href="${resultLink[n].link}"></a>${resultName[n].name}</li>`
+        n += 1;
+    }
+    return content;
+}
+
 function displaySearchResult(result) {
     if(!result.length) {
         result.innerHTML = '';
-        searchContainer.style.height = "51px";
+        searchContainer.style.height = "5.3vh";
     }
     else {
         searchContainer.style.height = "fit-content";
     }
-    const content = result.map((list)=>{
-        return "<li>" + list + "</li>";
-    });
-
+    // const content = result.map((list)=>{
+    //     return "<li>" + list + "</li>";
+    // });
+    let content = makeList(resultName, resultLink);
+    console.log(content);
     resultBox.innerHTML = "<ul>" + content.join('') + "</ul>";
 }
