@@ -58,47 +58,65 @@ const searchContainer = document.querySelector(".search-container");
 // check if the input is in the name parameters of list
 function isInNames(value) {
     let n = 0;
-    let result = [];
+    let resultName = [];
     while (n != availableKeywords.length) {
         let isInText = availableKeywords[n].name.toLowerCase().includes(value);
+        // console.log(isInText);
         if (isInText) {
-            result.push(availableKeywords[n].name);
+            resultName.push(availableKeywords[n].name);
         }
         n += 1;
     }
-    return result;
+    return resultName;
+}
+function getLink(value){
+    let n = 0;
+    let resultLink = [];
+    while (n != availableKeywords.length) {
+        let isInText = availableKeywords[n].name.toLowerCase().includes(value);
+        // console.log(isInText);
+        if (isInText) {
+            resultLink.push(availableKeywords[n].link);
+        }
+        n += 1;
+    }
+    return resultLink;
 }
 
 inputBox.onkeyup = function () {
-    let result = [];
+    let resultName = [];
+    let resultLink = [];
     let input = inputBox.value;
     if(input.length){
         // result = availableKeywords.filter((keyword)=>{
         //     return keyword.toLowerCase().includes(input.toLowerCase());
         // });
         // result = availableKeywords.filter(isInNames);
-        result = isInNames(input.toLowerCase());
-        if (!result.length) {
-            result.push("No matches for your search");
+        resultName = isInNames(input.toLowerCase());
+        if (!resultName.length) {
+            resultName.push("No matches for your search");
         }
-        console.log(result);
+        resultLink = getLink(input.toLowerCase());
+        console.log(resultName);
+        console.log(resultLink);
     }
-    displaySearchResult(result);
+    displaySearchResult(resultName, resultLink);
+    resultLink = [];
 }
 
 function makeList(resultName, resultLink) {
     let content = [];
     let n = 0;
     while (n != resultName.length) {
-        content[n] = `<li><a href="${resultLink[n].link}"></a>${resultName[n].name}</li>`
+        content[n] = `<li><a href="${resultLink[n]}">${resultName[n]}</a></li>`
         n += 1;
     }
     return content;
 }
 
-function displaySearchResult(result) {
-    if(!result.length) {
-        result.innerHTML = '';
+function displaySearchResult(resultName, resultLink) {
+    if(!resultName.length) {
+        resultName.innerHTML = '';
         searchContainer.style.height = "5.3vh";
     }
     else {
