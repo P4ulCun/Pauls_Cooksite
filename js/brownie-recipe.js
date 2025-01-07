@@ -24,6 +24,16 @@ searchBtn.onclick = function() {
     else {
         searchMenu.className = "search-container";
     }
+    // if (!searchMenu.classList.contains("responsive-search")) {
+    //     // searchMenu.classList.add("responsive-search");
+    //     searchMenu.classList.toggle("responsive-search");
+    //     console.log(searchMenu.outerHTML);
+    // }
+    // else {
+    //     // searchMenu.classList.remove("responsive-search");
+    //     searchMenu.classList.toggle("responsive-search");
+    //     console.log(searchMenu.outerHTML);
+    // }
 }
 
 // search bar functionality

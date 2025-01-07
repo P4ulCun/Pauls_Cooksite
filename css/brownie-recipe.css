@@ -403,10 +403,10 @@ width: 40px;
 height: 40px; 
 }
 
-aside{
+.go-to-start{
 text-align: center;
 }
-aside a{
+.go-to-start a{
 text-decoration: none;
 cursor:pointer;
 color:black;
@@ -559,6 +559,12 @@ color:black;
   z-index: 100000;
 }
 
+/* notes portion of styling */
+
+.notes {
+  border: 1px solid black;
+}
+
 /* animations */
 
 @keyframes animatie {
@@ -590,16 +596,12 @@ color:black;
 
 /* responsive */
 
-@media screen and (max-width: 1100px){
-  .main{
-    width: 55%;
-  }
+@media screen and (max-width: 1250px) {
   .nav-burger button{
     display: block;
     position: absolute;
     right:20px;
     cursor: pointer;
-    /* border:1px solid black; */
   }
   .nav-burger{
     padding-top:3vh;
@@ -610,6 +612,27 @@ color:black;
   .menu{
     display: none;
   }
+}
+
+@media screen and (max-width: 1100px){
+  .main{
+    width: 55%;
+  }
+  /* .nav-burger button{
+    display: block;
+    position: absolute;
+    right:20px;
+    cursor: pointer;
+  }
+  .nav-burger{
+    padding-top:3vh;
+  }
+  .nav-burger button:active{
+    transform: scale(0.9);
+  }
+  .menu{
+    display: none;
+  } */
 
   /* .search-container{
     width: 230px;
@@ -631,7 +654,7 @@ color:black;
   } */
 }
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1250px){
 .responsive ul{
   position: absolute;
   left:0px;

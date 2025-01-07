@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homepage</title>
+        <link rel="icon" href="../images/cutlery.png">
+        <link rel="stylesheet" type="text/css" href="../css/notes.css">
+        
+    </head>
+    <body>
+        <nav class="nav_container" id="navigation">
+            <!--logo in stanga-->
+
+            <a href="homepage.html" class="logo">
+                <img src="../images/bun_logo_1-removebg.png" alt="page logo">
+            </a>
+
+            <!-- search bar -->
+
+            <div class="search-container">
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Ex: brownie ingredients" autocomplete="off">
+                    <button id="search-button"></button>
+                </div>
+                <div class="result-box">
+
+                </div>
+            </div>
+
+            <!-- dropdown button -->
+
+            <div class="nav-burger">
+                <button id="nav-button"></button>
+            </div>
+            
+            <!-- search box  button -->
+
+            <div class="search-box">
+                <button id="search-dropdown"></button>
+            </div>
+
+            <!-- navigation menu -->
+
+            <div class="menu">
+            <ul>
+                <li><a href="homepage.html"><div>Home</div></a></li>
+                <li>
+                    <a><div>Recipes</div></a>
+                    <ul class="submenu-recipes">
+                        <li><a href="./shakshuka-recipe.html"><div>Shakshuka</div></a></li>
+                        <li><a href="./lasagna-recipe.html"><div>Lasagna</div></a></li>
+                        <li><a href="./brownie-recipe.html"><div>Brownie</div></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a><div>Jump to</div></a>
+                    <ul class="submenu">
+                        <li><a href="#ingredients"><div>Ingredients</div></a></li>
+                        <li><a href="#steps"><div>Preparation steps</div></a></li>
+                        <li><a href="#video"><div>Video</div></a></li>
+                        <li><a href="#galery"><div>Galery</div></a></li>
+                    </ul>
+                </li>
+                <li><a href="./measurements.html"><div>Measurements</div></a></li>
+                <li><a href="./notes.html"><div>Notes</div></a></li>
+            </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="container">
+                <div class="add_row">
+                    <div class="add_icon">
+                        <button id="add_btn"></button>
+                    </div>
+                </div>
+
+                <div class="notes-container">
+                   
+                </div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <div class="item-1">
+                <a href="homepage.html" class="logo">
+                    <img src="../images/bun_logo_3-removebg.png" alt="page logo">
+                </a>
+                <p>Welcome to Paul's Cooksite! This is a place where food lovers of all levels can explore, create, and enjoy the art of cooking. From quick weekday meals to decadent desserts, we bring you easy-to-follow recipes with a dash of inspiration. Our blog is filled with cooking tips, ingredient insights, and kitchen hacks to help you feel confident in the kitchen.</p>
+            </div>
+            <div class="item-2">
+                <h2>Bon Appétit!</h2>
+                <h3>And don't forget to follow us on:</h3>
+                <div class="sm-links">
+                    <a href=""><img src="../images/youtube.png" alt=""></a>
+                    <a href=""><img src="../images/instagram.png" alt=""></a>
+                    <a href=""><img src="../images/facebook.png" alt=""></a>
+                    <a href=""><img src="../images/github.png" alt=""></a>
+                </div>
+            </div>
+        </footer>
+
+        <aside class="go-to-start">
+            <div class="animation-box">
+                <a href="#navigation">To the top!</a>
+            </div>
+        </aside>
+    </body>
+    <script src="../js/notes.js"></script>
+</html>
