@@ -3,15 +3,32 @@ const createBtn = document.getElementById("add_btn");
 
 let notes = document.querySelectorAll(".input-note")
 
+function getRandomHexColor () {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+    //padstart adauga zerouri pana cand numarul are 6 cifre
+}
+
+function updateStorage () {
+    let notesContainer1 = document.querySelector(".notes-container1");
+    if (notesContainer1) {
+        localStorage.setItem("notes", notesContainer1.innerHTML);
+    }
+}
+
+// window.onload = function () {
+//     let notesContainer = document.querySelector(".notes-container");
+//     notesContainer.innerHTML = localStorage.getItem("notes");
+// }
+
 createBtn.onclick = function () {
-    let notesContainer = document.createElement("div");
-    notesContainer.className = "notes-container";
-    notesContainer.style.backgroundColor = "#fae1c6";
-    notesContainer.style.borderRadius = "10px";
+    let notesContainer1 = document.createElement("div");
+    notesContainer1.className = "notes-container1";
+    notesContainer1.style.backgroundColor = getRandomHexColor();
+    notesContainer1.style.borderRadius = "10px";
 
     let nameRow = document.createElement("div");
     nameRow.className = "name-row";
-    nameRow.style.display = "felx";
+    nameRow.style.display = "flex";
     nameRow.style.justifyContent = "space-between";
     nameRow.style.borderRadius = "10px";
 
@@ -60,7 +77,18 @@ createBtn.onclick = function () {
 
     nameRow.appendChild(delIcon);
 
-    notesContainer.appendChild(nameRow);
-    notesContainer.appendChild(inputNote);
-    container.appendChild(notesContainer);
+    let notesContainer = document.querySelector(".notes-container");
+    notesContainer1.appendChild(nameRow);
+    notesContainer1.appendChild(inputNote);
+    notesContainer.appendChild(notesContainer1);
+    updateStorage();
 }
+
+// delBtn.onclick() = function () {
+//     let notesContainer = document.getElementById("del-Btn");
+//     notesContainer.innerHTML = "blabla";
+// }
+let notesContainer1 = document.querySelector(".notes-container1");
+notesContainer1.addEventListener("click", function(e) {
+    // if (e.target.tagName)
+})
