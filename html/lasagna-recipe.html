@@ -5,13 +5,41 @@
         <title>Lasagna</title>
         <link rel="icon" href="../images/lasagna.png">
         <link rel="stylesheet" type="text/css" href="../css/lasagna-recipe.css">
+        <link rel="stylesheet" type="text/css" href="../css/responsiveButtons.css">
     </head>
     <body>
         <nav class="nav_container" id="navigation">
             <a href="homepage.html" class="logo">
                 <img src="../images/bun_logo_1-removebg.png" alt="page logo">
             </a>
-            <ul class="menu">
+            <!-- search bar -->
+
+            <div class="search-container">
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Ex: brownie ingredients" autocomplete="off">
+                    <button id="search-button"></button>
+                </div>
+                <div class="result-box">
+
+                </div>
+            </div>
+
+            <!-- dropdown button -->
+
+            <div class="nav-burger">
+                <button id="nav-button"></button>
+            </div>
+            
+            <!-- search box  button -->
+
+            <div class="search-box">
+                <button id="search-dropdown"></button>
+            </div>
+
+            <!-- navigation menu -->
+
+            <div class="menu">
+            <ul>
                 <li><a href="homepage.html"><div>Home</div></a></li>
                 <li>
                     <a><div>Recipes</div></a>
@@ -30,7 +58,9 @@
                     </ul>
                 </li>
                 <li><a href="./measurements.html"><div>Measurements</div></a></li>
+                <li><a href="./login.html" id="loginPage"><div>Login</div></a></li>
             </ul>
+            </div>
         </nav>
 
         <main class="main">
@@ -174,4 +204,6 @@
             </div>
         </aside>
     </body>
+    <script src="../js/functionality.js"></script>
+    <script src="../js/login_session.js"></script>
 </html>

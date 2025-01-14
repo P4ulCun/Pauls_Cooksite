@@ -1,0 +1,84 @@
+{
+    "availableKey": [
+    {
+        "name": "Home",
+        "link": "./home.html"
+    },
+    {
+        "name": "Lasagna ingredients",
+        "link": "./lasagna-recipe.html#ingredients"
+    },
+    {
+        "name": "Lasagna steps",
+        "link": "./lasagna-recipe.html#steps"
+    },
+    {
+        "name": "Lasagna video",
+        "link": "./lasagna-recipe.html#video"
+    },
+    {
+        "name": "Lasagna galery",
+        "link": "./lasagna-recipe.html#galery"
+    },
+    {
+        "name": "Lasagna recipe",
+        "link": "./lasagna-recipe.html"
+    },
+    {
+        "name": "Brownie recipe",
+        "link": "./brownie-recipe.html"
+    },
+    {
+        "name": "Brownie ingredients",
+        "link": "./brownie-recipe.html#ingredients"
+    },
+    {
+        "name": "Brownie steps",
+        "link": "./brownie-recipe.html#steps"
+    },
+    {
+        "name": "Brownie video",
+        "link": "./brownie-recipe.html#video"
+    },
+    {
+        "name": "Brownie galery",
+        "link": "./brownie-recipe.html#galery"
+    },
+    {
+        "name": "Shakshuka recipe",
+        "link": "./shakshuka-recipe.html"
+    },
+    {
+        "name": "Shakshuka ingredients",
+        "link": "./shakshuka-recipe.html#ingredients"
+    },
+    {
+        "name": "Shakshuka steps",
+        "link": "./shakshuka-recipe.html#steps"
+    },
+    {
+        "name": "Shakshuka video",
+        "link": "./shakshuka-recipe.html#video"
+    },
+    {
+        "name": "Shakshuka galery",
+        "link": "./shakshuka-recipe.html#galery"
+    },
+    {
+        "name": "Measurements",
+        "link": "./measurements.html"
+    },
+    {
+        "name": "Measurements - volumes",
+        "link": "./measurements.html#volume"
+    },
+    {
+        "name": "Measurements - temperatures",
+        "link": "./measurements.html#temperature"
+    },
+    {
+        "name": "Measurements - weights",
+        "link": "./measurements.html#weight"
+    }
+]
+}

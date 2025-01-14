@@ -11,12 +11,20 @@ function validateEmail(email){
 
 form.addEventListener('submit', (event) => {
     let errors = [];
-  
     errors = getLoginFormErrors(email_input.value, password_input.value);
 
     if(errors.length > 0){
       event.preventDefault();
       error_message.innerText  = errors.join(". ");
+    }
+    else {
+      let loginInfo = {
+        email: email_input.value,
+        password: password_input.value 
+      };
+      localStorage.setItem("loginInfo", JSON.stringify(loginInfo));
+      event.preventDefault();
+      window.location.href = "../html/homepage.html";
     }
 
     // sa fac cu local storage

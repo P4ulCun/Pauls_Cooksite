@@ -505,6 +505,7 @@ color:black;
   color:grey;
   font-size: 15px;
   font: inherit;
+  overflow-x: hidden;
   /* border: 1px solid black; */
 }
 #search-button{
@@ -513,7 +514,6 @@ color:black;
   width: 3vh;
   height: 3vh;
   border: none;
-  /* border: 1px solid black; */
 }
 .result-box ul{
   width: 100%;

@@ -36,31 +36,75 @@ searchBtn.onclick = function() {
     // }
 }
 
+
+
 // search bar functionality
 
-let availableKeywords = [
-    {
-        name: "Lasagna recipe",
-        link: "./lasagna-recipe.html"
-    },
-    {
-        name: "Brownie recipe",
-        link: "./brownie-recipe.html"
-    },
-    {
-        name: "Shakshuka recipe",
-        link: "./shakshuka-recipe.html"
-    },
-    {
-        name: "Lasagna ingredients",
-        link: "./lasagna-recipe.html#ingredients"
-    },
-    {
-        name: "Lasagna galery",
-        link: "./lasagna-recipe.html#galery"
-    }
-];
+// let availableKeywords = [
+//     {
+//         name: "Lasagna recipe",
+//         link: "./lasagna-recipe.html"
+//     },
+//     {
+//         name: "Brownie recipe",
+//         link: "./brownie-recipe.html"
+//     },
+//     {
+//         name: "Shakshuka recipe",
+//         link: "./shakshuka-recipe.html"
+//     },
+//     {
+//         name: "Lasagna ingredients",
+//         link: "./lasagna-recipe.html#ingredients"
+//     },
+//     {
+//         name: "Lasagna galery",
+//         link: "./lasagna-recipe.html#galery"
+//     }
+// ];
 
+// AJAX fetch
+// let availableKeywords = {};
+// fetch('search_terms.json')
+//       .then(response => {
+//         if (!response.ok) {
+//           throw new Error('Network response was not ok ' + response.statusText);
+//         }
+//         return response.json();
+//       })
+//       .then(data => {
+//         availableKeywords = data;
+//         console.log(typeof fetchedData);
+//         console.log(fetchedData.availableKey[0].name);
+//         })
+//       .catch(error => {
+//         console.error('Fetch error:', error);
+// });
+// console.log(availableKeywords);
+
+// Ajax old
+let availableKeywords;
+const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'search_terms.json', true);
+
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        const data = JSON.parse(xhr.responseText);
+        availableKeywords = data.availableKey;
+        
+        // console.log(availableKeywords);
+        // console.log('Data fetched with XMLHttpRequest:', data);
+      } else {
+        console.error('Error fetching data:', xhr.statusText);
+      }
+    };
+
+    xhr.onerror = function () {
+      console.error('Request error');
+    };
+
+    xhr.send();
+// console.log(availableKeywords);
 const resultBox = document.querySelector(".result-box");
 const inputBox = document.querySelector("#input-box");
 const searchContainer = document.querySelector(".search-container");
@@ -107,8 +151,6 @@ inputBox.onkeyup = function () {
             resultName.push("No matches for your search");
         }
         resultLink = getLink(input.toLowerCase());
-        console.log(resultName);
-        console.log(resultLink);
     }
     displaySearchResult(resultName, resultLink);
     resultLink = [];
@@ -117,7 +159,11 @@ inputBox.onkeyup = function () {
 function makeList(resultName, resultLink) {
     let content = [];
     let n = 0;
-    while (n != resultName.length) {
+    let nMax = resultName.length;
+    if (nMax > 5) {
+        nMax = 5;
+    }
+    while (n != nMax) {
         content[n] = `<li><a href="${resultLink[n]}">${resultName[n]}</a></li>`
         n += 1;
     }
@@ -136,6 +182,17 @@ function displaySearchResult(resultName, resultLink) {
     //     return "<li>" + list + "</li>";
     // });
     let content = makeList(resultName, resultLink);
-    console.log(content);
     resultBox.innerHTML = "<ul>" + content.join('') + "</ul>";
 }
+
+const animation = document.querySelector(".animation-box");
+
+function getRandomHexColor () {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+    //padstart adauga zerouri pana cand numarul are 6 cifre
+}
+
+setInterval ( () => {
+    let color = getRandomHexColor();
+    animation.style.backgroundColor = color;
+}, 1500)
