@@ -20,19 +20,25 @@
             width: 800px;
             height: 800px;
             border: 1px solid black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0px;
+            justify-content: flex-start;
+            align-items: flex-start;
         }
         .celula {
             background-color: pink;
         }
-        .celula div {
+        .celula{
             border: 1px solid red;
             transition-duration: 1s;
             transition-timing-function: ease;
         }
-        .celula div:nth-child(2n) {
+        .celula:nth-child(2n) {
             border: 1px solid purple;
         }
-        .celula div:hover {
+        .celula:hover {
             background-color: blue;
         }
         @media (max-width: 900px) {
@@ -90,6 +96,27 @@
                         labels[i].remove();
                     }
                 }
+            })
+
+            div.addEventListener("dblclick", function (event) {
+                event.stopPropagation();
+                div.style.backgroundColor = "grey";
+                setTimeout(function () {
+                    let sizeCube = window.getComputedStyle(div).width;
+                    // sizeCube = parseInt(sizeCube.slice(0, sizeCube.length - 2)) / (N + 1);
+                    sizeCube = 100;
+                    for (let i = 0; i < N; i++) {
+                        for (let j = 0; j < N; j++) {
+                            let copil = document.createElement("div");
+                            copil.className = "celula";
+                            copil.style.width = `${sizeCube}px`;
+                            copil.style.height = `${sizeCube}px`;
+                            copil.dataset.row = i;
+                            copil.dataset.column = j;
+                            div.appendChild(copil);
+                        }
+                    }
+                },5000);
             })
         }
     </script>
