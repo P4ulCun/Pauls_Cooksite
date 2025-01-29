@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dots</title>
+    </head>
+
+    <body>
+    </body>
+
+    <script>
+        function randomCoordX () {
+            let width = window.innerWidth;
+            x = Math.floor(Math.random() * width);
+            return x.toString();
+        }
+        function randomCoordY () {
+            let height = window.innerHeight;
+            y = Math.floor(Math.random() * height);
+            return y.toString();
+        }
+        let cntBuline = 0;
+
+        let contor = document.createElement("div")
+        contor.id = "contor";
+        document.body.appendChild(contor);
+        document.addEventListener ("keydown", function (event) {
+            if ("rbyg".includes(event.key)) {
+                bulina = document.createElement("div");
+                bulina.style.height = "100px";
+                bulina.style.width = "100px";
+                bulina.style.borderRadius = "50%";
+                
+                if (event.key == "r") {
+                    bulina.style.backgroundColor = "red";
+                }
+                if (event.key == "g") {
+                    bulina.style.backgroundColor = "green";
+                }
+                if (event.key == "y") {
+                    bulina.style.backgroundColor = "yellow";
+                }
+                if (event.key == "b") {
+                    bulina.style.backgroundColor = "blue";
+                }
+
+                bulina.style.position = "absolute";
+                bulina.style.top = randomCoordY() + "px";
+                bulina.style.left = randomCoordX() + "px";
+                document.body.appendChild(bulina);
+                cntBuline += 1;
+            }
+
+            bulina.addEventListener ("click", function () {
+                bulina = document.createElement("div");
+                bulina.style.height = "100px";
+                bulina.style.width = "100px";
+                bulina.style.borderRadius = "50%";
+                
+                if (event.key == "r") {
+                    bulina.style.backgroundColor = "red";
+                }
+                if (event.key == "g") {
+                    bulina.style.backgroundColor = "green";
+                }
+                if (event.key == "y") {
+                    bulina.style.backgroundColor = "yellow";
+                }
+                if (event.key == "b") {
+                    bulina.style.backgroundColor = "blue";
+                }
+
+                bulina.style.position = "absolute";
+                bulina.style.top = randomCoordY() + "px";
+                bulina.style.left = randomCoordX() + "px";
+                document.body.appendChild(bulina);
+                cntBuline += 1;
+            })
+
+            localStorage.setItem("numar buline", cntBuline);
+            contor.innerHTML = `<p>Avem ${cntBuline} buline</p>`;
+        })
+    </script>
+</html>

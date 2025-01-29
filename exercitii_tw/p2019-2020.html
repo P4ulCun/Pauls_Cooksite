@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>2019-2020</title>
+    </head>
+    <style>
+        /* de ajutor cand folosesc absolute positioning */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%; 
+            /* overflow: hidden; */
+            position: relative; /* Necessary for absolute positioning of children */
+        }
+
+        
+            #parinte {
+                height: 1000px;
+                width: 1000px;
+                border: 2px solid red;
+            }
+            .copil {
+                height: 30px;
+                width: 30px;
+                transition-duration: 2s;
+            }
+            .copil:hover {
+                transform: scale(2);
+            }
+            .activ {
+                background-color: rgb(226, 32, 64) !important;
+            }
+        @media (max-width: 1100px) {
+            .copil {
+                display: none;
+            }
+            #parinte {
+                width: 50vw;
+                height: 500px;
+                border: none;
+                background-color: grey;
+            }
+        }
+    </style>
+    <body>
+    
+    </body>
+    <script>
+        window.onload = function () {
+            let elemente = [];
+            let elementeMutate = [];
+
+            let input = document.createElement("input");
+            input.type = "range";
+            input.min = "4";
+            input.max = "10"
+            input.value = "7";
+            if (localStorage.getItem("nrDiv") != "") {
+                input.value = localStorage.getItem("nrDiv");
+            }
+            let div = document.createElement("div");
+            div.id = "parinte";
+            document.body.appendChild(input);
+            document.body.appendChild(div);
+
+            let contor = document.createElement("p");
+            contor.id = "cnt";
+            document.body.appendChild(contor);
+
+            let x = window.getComputedStyle(div).width;
+            x = parseInt(x.slice(0, x.length - 2));
+            let y = window.getComputedStyle(div).height;
+            y = parseInt(y.slice(0, y.length - 2));
+
+            let hInput = window.getComputedStyle(input).height;
+            hInput = parseInt(hInput.slice(0, hInput.length - 2));
+            console.log(hInput);
+            function updateElem () {
+                div.innerHTML = "";
+                elemente = [];
+                elementeMutate = [];
+                localStorage.setItem("nrDiv", input.value);
+                let count = parseInt(input.value);
+                for (let i = 0; i < count; i++) {
+                    let elem = document.createElement("div");
+                    elem.className = "copil";
+                    elem.style.position = "absolute";
+                    elem.style.left = `${Math.floor(Math.random() * (x - 30))}px`;
+                    elem.style.top = `${Math.floor(Math.random() * (y - 30) + hInput)}px`;
+                    elem.style.backgroundColor = "black";
+                    div.appendChild(elem);
+                    elemente.push(elem);
+                }
+            }
+            input.addEventListener ("input", updateElem);
+            updateElem();
+
+            document.body.addEventListener ("click", function (event) {
+                let clickedDiv = -1;
+                for (let i = 0; i < elemente.length; i++) {
+                    if (elemente[i].contains(event.target)) {
+                        clickedDiv = i;
+                    }
+                }
+
+                for (let i = 0; i < elemente.length; i++) {
+                    elemente[i].classList.remove("activ");
+                }
+
+                if (clickedDiv != -1) {
+                    elemente[clickedDiv].classList.add("activ");
+                }
+
+                if (div === event.target) {
+                    let cnt = document.getElementById("cnt");
+                    cnt.innerText = elementeMutate.length;
+                }
+		    })
+
+            
+            document.addEventListener("keyup", function (event) {
+                let divActiv = document.querySelector(".activ");
+                if (divActiv) {
+                    if (!elementeMutate.includes(divActiv)) {
+                        elementeMutate.push(divActiv);
+                    }
+                    let currX = window.getComputedStyle(divActiv).left;
+                    currX = parseInt(currX.slice(0, currX.length - 2));
+                    console.log(currX);
+                    if (event.key === "ArrowLeft") {
+                        currX -= 3; 
+                        divActiv.style.left = `${currX}px`;
+                    }
+                    else if (event.key === "ArrowRight") {
+                        currX += 3;
+                        divActiv.style.left = `${currX}px`;
+                    }
+                }
+                
+            })
+
+            setTimeout(function () {
+                let intervalId = setInterval(function () {
+                    if (elemente.length == 0) {
+                        clearInterval(intervalId);
+                    }
+
+                    elemente.pop();
+                    div.removeChild(div.lastChild);
+                },1000);
+            },5000);
+        }
+    </script>
+</html>

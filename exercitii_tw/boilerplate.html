@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML 5 Boilerplate</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <style>
+        /* de ajutor cand folosesc absolute positioning */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%; 
+            /* overflow: hidden; */
+            position: relative; /* Necessary for absolute positioning of children */
+        }
+    </style>
+    <body>
+    
+    </body>
+
+    <script src="index.js"></script>
+    <script>
+        // boiler plate fetch data ajax
+        function fetchData(url, color) {
+			fetch(url)
+				.then(response => {
+					if (!response.ok) {
+						throw new Error(`HTTP error! Status: ${response.status}`);
+					}
+					return response.json();
+				})
+				.then(data => {
+					console.log("Date primite:", data);
+					processData(data, color);
+				})
+				.catch(error => {
+					console.error("Erori:", error);
+        		});
+		}
+
+		function processData(jsonObject, color) {
+			let data = jsonObject;
+			if (data.hasOwnProperty(color)) {
+				let para = document.getElementById("rezultat");
+				para.innerText = data[color];
+				para.style.color = color;
+			}
+			else {
+				alert("culoarea selectata nu are o descriere!");
+			}
+		}
+
+        // pentru apelul
+        fetchData("fisier.json", inputColor);
+        // mai schimba ce ai nevoie
+
+        // exemplu de setTimeout si setInterval
+        setTimeout(function () {
+                let intervalId = setInterval(function () {
+                    if (elemente.length == 0) {
+                        clearInterval(intervalId);
+                    }
+
+                    elemente.pop();
+                    div.removeChild(div.lastChild);
+                },1000);
+            },5000);
+    </script>
+</html>

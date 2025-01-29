@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>P2</title>
+    </head>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%; 
+            /* overflow: hidden; */
+            position: relative; /* Necessary for absolute positioning of children */
+        }
+        .patrat {
+            background-color: green;
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+    <body>
+
+    </body>
+    <script>
+        let elemente = [];
+        let N = Math.floor((Math.random() * 5) + 5);
+        console.log(N);
+        for (let i = 1; i <= N; i++) {
+            let elem = document.createElement("div");
+            elem.className = "patrat";
+            elem.id = `nr${i}`;
+            elem.style.position = "absolute";
+            document.body.appendChild(elem);
+            elemente.push(elem);
+
+            elem.addEventListener ("click", function (event) {
+                elemLeft = elem.style.left;
+                if (elemLeft != "") {
+                    elemLeft = parseInt(elemLeft.slice(0, elemLeft.length - 2));
+                }
+                elemLeft += 10;
+                elem.style.left = `${elemLeft}px`;
+                event.stopPropagation();
+            })
+        }
+            
+            document.body.addEventListener ("click", function (event) {
+                let rand = Math.floor((Math.random() * (N)) + 1);
+                console.log(rand);
+                let clickedInElem = elemente.some(elem => elem.contains(event.target));
+                if (clickedInElem == false) {
+                    let randDiv = document.getElementById(`nr${rand}`);
+                    coordX = event.pageX;
+                    coordY = event.pageY;
+                    randDiv.style.left = `${coordX}px`;
+                    randDiv.style.top = `${coordY}px`;
+                }
+            })
+        
+    </script>
+</html>

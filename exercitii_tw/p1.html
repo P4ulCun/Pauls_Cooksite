@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>P1</title>
+    </head>
+    <style>
+        .container {
+            height: 50vh;
+            width: 250px;
+            border: 2px solid lightblue;
+            border-style: dotted;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        .container div {
+            border: 8px solid black;
+            border-style: double;
+            font: 15px;
+        }
+        #a {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+        #b {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+        #c {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        #d {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
+        #e {
+            grid-column: 3 / 4;
+            grid-row: 1 / 4;
+        }
+        @media (max-width: 600px) or (max-height: 500px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+            .container div {
+                animation-name: border-change;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                transition: color 2s;
+                transition: font-size 2s;
+            }
+            .container div:hover {
+                font-size: 30px;
+                color: red;
+            }
+        }
+
+        @keyframes border-change {
+            0% {border: 8px solid black;}
+            50% {border: 8px solid yellow;}
+            100% {border: 8px solid black;}
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div id="a">1</div>
+            <div id="b">2</div>
+            <div id="c">3</div>
+            <div id="d">4</div>
+            <div id="e">5</div>
+        </div>
+    </body>
+</html>
