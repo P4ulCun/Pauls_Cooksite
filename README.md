@@ -1,6 +1,4 @@
-![alt text](./images/banner_readme.png)
-
-# Paul's Cooksite
+# ![alt text](./images/banner_v2.png)
 
 Paul's Cooksite is my personal website where I post recipe ideas and inspiration.✨
 
