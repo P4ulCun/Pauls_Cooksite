@@ -1,196 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Shakshuka</title>
-        <link rel="icon" href="../images/shakshuka.png">
-        <link rel="stylesheet" type="text/css" href="../css/shakshuka-recipe.css">
-        <link rel="stylesheet" type="text/css" href="../css/responsiveButtons.css">
-    </head>
-    <body>
-        <nav class="nav_container" id="navigation">
-            <!--logo in stanga-->
-            <a href="homepage.html" class="logo">
-                <img src="../images/bun_logo_1-removebg.png" alt="page logo">
-            </a>
-            <!-- search bar -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shakshuka - Paul's Cooksite</title>
+  <meta name="description" content="Very fast, very nutritious and very easy to make">
+  <link rel="icon" href="../images/shakshuka.png">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-recipe-id="shakshuka">
+  <!-- NAVIGATION -->
+  <nav class="nav_container" id="navigation">
+    <a href="../index.html" class="logo">
+      <img src="../images/bun_logo_1-removebg.png" alt="Paul's Cooksite Logo">
+    </a>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search recipes or ingredients..." autocomplete="off">
+      <div class="result-box" id="search-results"></div>
+    </div>
+    <div class="nav-burger">
+      <button id="nav-button" aria-label="Toggle Navigation"></button>
+    </div>
+    <div class="menu" id="nav-menu">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#recipes-section" class="active">Recipes</a></li>
+      </ul>
+    </div>
+  </nav>
 
-            <div class="search-container">
-                <div class="row">
-                    <input type="text" id="input-box" placeholder="Ex: brownie ingredients" autocomplete="off">
-                    <button id="search-button"></button>
-                </div>
-                <div class="result-box">
+  <main class="container" style="padding-top: 4rem;">
+    <div class="recipe-header">
+      <h1>Shakshuka</h1>
+      <h3>Very fast, very nutritious and very easy to make</h3>
+    </div>
 
-                </div>
-            </div>
+    <img class="recipe-image-large" src="../images/shakshuka_image.jpg" alt="A delicious looking shakshuka">
 
-            <!-- dropdown button -->
+    <div class="recipe-intro">
+      <p>Bring a taste of the Mediterranean to your kitchen with this vibrant shakshuka recipe! A delightful dish of poached eggs nestled in a spicy, savory tomato and pepper sauce, shakshuka is perfect for breakfast, brunch, or even dinner. Bursting with flavor and easy to make in just one pan, this warm, comforting meal pairs wonderfully with fresh bread for dipping.</p>
+    </div>
 
-            <div class="nav-burger">
-                <button id="nav-button"></button>
-            </div>
-            
-            <!-- search box  button -->
+    <div class="recipe-content">
+      <!-- INFO TABLE -->
+      <table class="info-table">
+        <tr>
+          <th colspan="2">Recipe Details</th>
+        </tr>
+        <tr>
+          <td><strong>Prep Time:</strong><br>10 mins</td>
+          <td><strong>Cook Time:</strong><br>20 mins</td>
+        </tr>
+        <tr>
+          <td><strong>Total Time:</strong><br>30 mins</td>
+          <td><strong>Serving Size:</strong><br><span id="serving-display">2</span> persons</td>
+        </tr>
+      </table>
 
-            <div class="search-box">
-                <button id="search-dropdown"></button>
-            </div>
+      <!-- CONTROLS -->
+      <div class="feature-controls hide-in-shopping">
+        <div class="scaler-control">
+          <span>Serves:</span>
+          <button class="btn-icon" id="btn-scale-down" aria-label="Decrease Servings">−</button>
+          <span id="scale-value">2</span>
+          <button class="btn-icon" id="btn-scale-up" aria-label="Increase Servings">+</button>
+        </div>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <button class="btn-action units-toggle" id="btn-toggle-units">Switch to Imperial</button>
+          <button class="btn-action" id="btn-shopping-mode">Shopping Mode</button>
+        </div>
+      </div>
 
-            <!-- navigation menu -->
-
-            <div class="menu">
-            <ul>
-                <li><a href="homepage.html"><div>Home</div></a></li>
-                <li>
-                    <a><div>Recipes</div></a>
-                    <ul class="submenu">
-                        <li><a href="./lasagna-recipe.html"><div>Lasagna</div></a></li>
-                        <li><a href="./brownie-recipe.html"><div>Brownie</div></a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a><div>Jump to</div></a>
-                    <ul class="submenu">
-                        <li><a href="#ingredients"><div>Ingredients</div></a></li>
-                        <li><a href="#steps"><div>Preparation steps</div></a></li>
-                        <li><a href="#video"><div>Video</div></a></li>
-                        <li><a href="#galery"><div>Galery</div></a></li>
-                    </ul>
-                </li>
-                <li><a href="./measurements.html"><div>Measurements</div></a></li>
-                <li><a href="./login.html" id="loginPage"><div>Login</div></a></li>
-            </ul>
-            </div>
-        </nav>
-
-        <main class="main">
-            <header id="start">
-                <h1>Shakshuka</h1>
-                <h3>Very fast, very nutritious and very easy to make</h3>
-            </header>
-
-            <section id="intro">
-                <img class ="responsive-image" src="../images/shakshuka_image.jpg" alt="A delicious looking shakshuka">
-                <h4>Bring a taste of the Mediterranean to your kitchen with this vibrant shakshuka recipe! A delightful dish of poached eggs nestled in a spicy, savory tomato and pepper sauce, shakshuka is perfect for breakfast, brunch, or even dinner. Bursting with flavor and easy to make in just one pan, this warm, comforting meal pairs wonderfully with fresh bread for dipping.</h4>
-                <h4>Follow along for a simple recipe that's sure to become a favorite!</h4>
-            </section>
-
-            <section id="ingredients">
-                <h2>Ingredients</h2>
-                <div class="responsive-table">
-                    <table class="border1">
-                        <tr>
-                            <th colspan="2">Lasagna</th>
-                        </tr>
-                        <tr>
-                            <td><p><b>Prep Time:</b><br>10 mins</p></td>
-                            <td><p><b>Cook Time:</b><br>20 mins</p></td>
-                        </tr>
-                        
-                        <tr>
-                            <td><p><b>Total Time:</b><br>30 mins</p></td>
-                            <td><p id="serv"><b>Serving Size:</b><br>2 persons</p></td>
-                        </tr>
-                        
-                        <tr>
-                            <th colspan="2">Ingredients</th>
-                        </tr>
-                        <tr>
-                            <td>Olive oil - 1 tablespoon</td>
-                            <td>Tomato sauce - 350g</td>
-                        </tr>
-                        <tr>
-                            <td>Onion - 1</td>
-                            <td>Salt</td>
-                        </tr>
-                        <tr>
-                            <td>Bell pepper - 1</td>
-                            <td>Pepper</td>
-                        </tr>
-                        <tr>
-                            <td>Chilli pepper - 1</td>
-                            <td>Cumin</td>
-                        </tr>
-                        <tr>
-                            <td>Garlic - 3 cloves</td>
-                            <td>Basil</td>
-                        </tr>
-                        <tr>
-                            <td>Zucchini / Eggplant - 1</td>
-                            <td>Eggs - 3</td>
-                        </tr>
-                    </table>
-                    </div>
-            </section>
-
-            <section id="steps">
-                <h2>Preparation</h2>
-                <ol>
-                    <li>Cut all the vegetables.</li>
-                    <li>Saute the onion, the peppers, and garlic with a little bit of extra virgin olive oil.</li>
-                    <li>Once softened, add the mushrooms and zucchini/eggplant and continue stirring.</li>
-                    <li>Add the tomato sauce and the aromatics and let it simmer for about 5 minutes.. </li>
-                    <li>When the sauce is ready, use the back of a spoon and make some holes in the sauce. </li>
-                    <li>Crack your eggs and nestle each egg in one of the holes you created. Cover the skillet and allow the eggs to simmer in the sauce over medium-low heat until the egg whites have settled.</li>
-                </ol>
-            </section>
-
-            <section id="video">
-                <h2>Video</h2>
-                <p>Here's a short video of the recipe to help you out:</p>
-                <div class="video-container">
-                    <iframe class="responsive-iframe" width="1280" height="720" src="https://www.youtube.com/embed/L76XJqz9PWo" title="The North African Breakfast Every Student NEEDS To Master (Shakshuka)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </section>
-
-            <section id="galery">
-                <h2>Galery</h2>
-                <div class="galery-container">
-                    <div class="image1">
-                        <img class ="responsive-image" src="../images/shakshuka-1.jpg" alt="A delicious looking slice of lasagna">
-                    </div>
-                    <!-- https://www.loveandlemons.com/shakshuka-recipe/ -->
-                    <div class="image2">
-                        <img class ="responsive-image" src="../images/shakshuka-2.jpg" alt="A delicious looking slice of lasagna">
-                    </div>
-                    <!-- https://downshiftology.com/recipes/shakshuka/ -->
-                    <div class="image3">
-                        <img class ="responsive-image" src="../images/shakshuka-3.jpg" alt="A delicious looking slice of lasagna">
-                    </div>
-                    <div class="image4">
-                        <img class ="responsive-image" src="../images/shakshuka-4.jpg" alt="A delicious looking slice of lasagna">
-                    </div>
-                    <!-- https://www.themediterraneandish.com/shakshuka-recipe/ -->
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="item-1">
-                <a href="homepage.html" class="logo">
-                    <img src="../images/bun_logo_3-removebg.png" alt="page logo">
-                </a>
-                <p>Welcome to Paul's Cooksite! This is a place where food lovers of all levels can explore, create, and enjoy the art of cooking. From quick weekday meals to decadent desserts, we bring you easy-to-follow recipes with a dash of inspiration. Our blog is filled with cooking tips, ingredient insights, and kitchen hacks to help you feel confident in the kitchen.</p>
-            </div>
-            <div class="item-2">
-                <h2>Bon Appétit!</h2>
-                <h3>And don't forget to follow us on:</h3>
-                <div class="sm-links">
-                    <a href=""><img src="../images/youtube.png" alt=""></a>
-                    <a href=""><img src="../images/instagram.png" alt=""></a>
-                    <a href=""><img src="../images/facebook.png" alt=""></a>
-                    <a href=""><img src="../images/github.png" alt=""></a>
-                </div>
-            </div>
-        </footer>
+      <!-- INGREDIENTS AREA -->
+      <section id="ingredients-section">
+        <h2>Ingredients</h2>
         
-        <aside>
-            <div class="animation-box">
-                <a href="#navigation">To the top!</a>
-            </div>
-        </aside>
-    </body>
-    <script src="../js/functionality.js"></script>
-    <script src="../js/login_session.js"></script>
+        <!-- Standard Read Mode Table -->
+        <table class="ingredients-table hide-in-shopping" id="ingredients-table">
+          <tr><th colspan="2">Ingredients List</th></tr>
+          <!-- Rendered via JS -->
+        </table>
+
+        <!-- Shopping Mode Checklist (Hidden by default) -->
+        <ul class="shopping-checklist" style="display: none;" id="shopping-checklist">
+          <!-- Rendered via JS -->
+        </ul>
+        
+        <div id="shopping-mode-controls" style="display: none; margin-top: 1rem; gap: 1rem;">
+          <button class="btn-action" id="btn-shopping-clear">Clear All</button>
+          <button class="btn-action units-toggle" id="btn-shopping-exit">Exit Shopping Mode</button>
+        </div>
+      </section>
+
+      <!-- STEPS AREA -->
+      <section id="steps" class="hide-in-shopping">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <h2 style="margin: 0;">Preparation</h2>
+          <button class="btn-action" id="btn-cook-mode">Cook Mode</button>
+        </div>
+        <ul class="steps-list" id="steps-list">
+          <!-- Rendered via JS -->
+        </ul>
+      </section>
+      
+      <section id="video" class="hide-in-shopping">
+        <h2>Video</h2>
+        <div class="video-container">
+          <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/L76XJqz9PWo" title="Shakshuka" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer hide-in-shopping">
+    <div class="item-1">
+      <a href="../index.html" class="logo">
+        <img src="../images/bun_logo_3-removebg.png" alt="Paul's Cooksite Footer Logo">
+      </a>
+      <p>Welcome to Paul's Cooksite! Explore, create, and enjoy the art of cooking.</p>
+    </div>
+    <div class="item-2">
+      <h2>Bon Appétit!</h2>
+      <h3>Follow us on:</h3>
+      <div class="sm-links">
+        <a href="#"><img src="../images/youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="../images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="../images/github.png" alt="GitHub"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COOK MODE OVERLAY -->
+  <div class="cook-mode-overlay" id="cook-mode-overlay" style="display: none;">
+    <div class="cook-mode-header">
+      <h3 style="font-family: var(--font-heading);">Cook Mode</h3>
+      <div class="progress-bar">
+        <div class="progress-fill" id="cook-progress"></div>
+      </div>
+      <button class="btn-icon" id="btn-cook-exit" style="background: transparent; border: 1px solid white;">X</button>
+    </div>
+    
+    <div class="cook-step-content">
+      <div class="cook-step-badge" id="cook-step-num">1</div>
+      <p id="cook-step-text">Step instruction goes here...</p>
+    </div>
+    
+    <div class="cook-controls">
+      <button class="btn-cook" id="btn-cook-prev">← Previous</button>
+      <button class="btn-cook" id="btn-cook-next">Next Step →</button>
+    </div>
+  </div>
+
+  <script src="../js/recipes.js"></script>
+  <script src="../js/main.js"></script>
+</body>
 </html>

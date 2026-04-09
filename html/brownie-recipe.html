@@ -1,194 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brownie - Paul's Cooksite</title>
+  <meta name="description" content="The perfect recipe for rich, chocolately and fudgy brownies.">
+  <link rel="icon" href="../images/brownie.png">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-recipe-id="brownie">
+  <!-- NAVIGATION -->
+  <nav class="nav_container" id="navigation">
+    <a href="../index.html" class="logo">
+      <img src="../images/bun_logo_1-removebg.png" alt="Paul's Cooksite Logo">
+    </a>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search recipes or ingredients..." autocomplete="off">
+      <div class="result-box" id="search-results"></div>
+    </div>
+    <div class="nav-burger">
+      <button id="nav-button" aria-label="Toggle Navigation"></button>
+    </div>
+    <div class="menu" id="nav-menu">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#recipes-section" class="active">Recipes</a></li>
+      </ul>
+    </div>
+  </nav>
 
-        <meta charset="UTF-8">
-        <title>Brownie</title>
-        <link rel="icon" href="../images/brownie.png">
-        <link rel="stylesheet" type="text/css" href="../css/brownie-recipe.css">
-        <link rel="stylesheet" type="text/css" href="../css/responsiveButtons.css">
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"> -->
-    </head>
-    <body>
-        <nav class="nav_container" id="navigation">
-            <!--logo in stanga-->
+  <main class="container" style="padding-top: 4rem;">
+    <div class="recipe-header">
+      <h1>Brownie</h1>
+      <h3>The perfect recipe for rich, chocolately and fudgy brownies.</h3>
+    </div>
 
-            <a href="homepage.html" class="logo">
-                <img src="../images/bun_logo_1-removebg.png" alt="page logo">
-            </a>
+    <img class="recipe-image-large" src="../images/brownie_image.jpg" alt="A delicious looking piece of brownie">
 
-            <!-- search bar -->
+    <div class="recipe-intro">
+      <p>Indulge in the ultimate chocolate treat with this rich and fudgy brownie recipe! Perfectly chewy on the edges and irresistibly gooey in the center, these homemade brownies are a chocolate lover's dream come true. Whether you're baking for a special occasion or just because, this simple recipe will have you enjoying delicious, bakery-style brownies right at home.</p>
+    </div>
 
-            <div class="search-container">
-                <div class="row">
-                    <input type="text" id="input-box" placeholder="Ex: brownie ingredients" autocomplete="off">
-                    <button id="search-button"></button>
-                </div>
-                <div class="result-box">
+    <div class="recipe-content">
+      <!-- INFO TABLE -->
+      <table class="info-table">
+        <tr>
+          <th colspan="2">Recipe Details</th>
+        </tr>
+        <tr>
+          <td><strong>Prep Time:</strong><br>15 mins</td>
+          <td><strong>Cook Time:</strong><br>30 mins</td>
+        </tr>
+        <tr>
+          <td><strong>Total Time:</strong><br>45 mins</td>
+          <td><strong>Serving Size:</strong><br><span id="serving-display">9</span> persons</td>
+        </tr>
+      </table>
 
-                </div>
-            </div>
+      <!-- CONTROLS -->
+      <div class="feature-controls hide-in-shopping">
+        <div class="scaler-control">
+          <span>Serves:</span>
+          <button class="btn-icon" id="btn-scale-down" aria-label="Decrease Servings">−</button>
+          <span id="scale-value">9</span>
+          <button class="btn-icon" id="btn-scale-up" aria-label="Increase Servings">+</button>
+        </div>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <button class="btn-action units-toggle" id="btn-toggle-units">Switch to Imperial</button>
+          <button class="btn-action" id="btn-shopping-mode">Shopping Mode</button>
+        </div>
+      </div>
 
-            <!-- dropdown button -->
+      <!-- INGREDIENTS AREA -->
+      <section id="ingredients-section">
+        <h2>Ingredients</h2>
+        
+        <table class="ingredients-table hide-in-shopping" id="ingredients-table">
+          <tr><th colspan="2">Ingredients List</th></tr>
+        </table>
 
-            <div class="nav-burger">
-                <button id="nav-button"></button>
-            </div>
-            
-            <!-- search box  button -->
+        <ul class="shopping-checklist" style="display: none;" id="shopping-checklist"></ul>
+        
+        <div id="shopping-mode-controls" style="display: none; margin-top: 1rem; gap: 1rem;">
+          <button class="btn-action" id="btn-shopping-clear">Clear All</button>
+          <button class="btn-action units-toggle" id="btn-shopping-exit">Exit Shopping Mode</button>
+        </div>
+      </section>
 
-            <div class="search-box">
-                <button id="search-dropdown"></button>
-            </div>
+      <!-- STEPS AREA -->
+      <section id="steps" class="hide-in-shopping">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <h2 style="margin: 0;">Preparation</h2>
+          <button class="btn-action" id="btn-cook-mode">Cook Mode</button>
+        </div>
+        <ul class="steps-list" id="steps-list"></ul>
+      </section>
+      
+      <section id="video" class="hide-in-shopping">
+        <h2>Video</h2>
+        <div class="video-container">
+          <iframe width="1280" height="720" src="https://www.youtube-nocookie.com/embed/VvJm4pQZ04s" title="Brownie" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </section>
+    </div>
+  </main>
 
-            <!-- navigation menu -->
+  <footer class="footer hide-in-shopping">
+    <div class="item-1">
+      <a href="../index.html" class="logo">
+        <img src="../images/bun_logo_3-removebg.png" alt="Paul's Cooksite Footer Logo">
+      </a>
+      <p>Welcome to Paul's Cooksite! Explore, create, and enjoy the art of cooking.</p>
+    </div>
+    <div class="item-2">
+      <h2>Bon Appétit!</h2>
+      <h3>Follow us on:</h3>
+      <div class="sm-links">
+        <a href="#"><img src="../images/youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="../images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="../images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="../images/github.png" alt="GitHub"></a>
+      </div>
+    </div>
+  </footer>
 
-            <div class="menu">
-            <ul>
-                <li><a href="homepage.html"><div>Home</div></a></li>
-                <li>
-                    <a><div>Recipes</div></a>
-                    <ul class="submenu-recipes">
-                        <li><a href="./shakshuka-recipe.html"><div>Shakshuka</div></a></li>
-                        <li><a href="./lasagna-recipe.html"><div>Lasagna</div></a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a><div>Jump to</div></a>
-                    <ul class="submenu">
-                        <li><a href="#ingredients"><div>Ingredients</div></a></li>
-                        <li><a href="#steps"><div>Preparation steps</div></a></li>
-                        <li><a href="#video"><div>Video</div></a></li>
-                        <li><a href="#galery"><div>Galery</div></a></li>
-                    </ul>
-                </li>
-                <li><a href="./measurements.html"><div>Measurements</div></a></li>
-                <li><a href="./login.html" id="loginPage"><div>Login</div></a></li>
-            </ul>
-            </div>
-        </nav>
+  <!-- COOK MODE OVERLAY -->
+  <div class="cook-mode-overlay" id="cook-mode-overlay" style="display: none;">
+    <div class="cook-mode-header">
+      <h3 style="font-family: var(--font-heading);">Cook Mode</h3>
+      <div class="progress-bar"><div class="progress-fill" id="cook-progress"></div></div>
+      <button class="btn-icon" id="btn-cook-exit" style="background: transparent; border: 1px solid white;">X</button>
+    </div>
+    <div class="cook-step-content">
+      <div class="cook-step-badge" id="cook-step-num">1</div>
+      <p id="cook-step-text">...</p>
+    </div>
+    <div class="cook-controls">
+      <button class="btn-cook" id="btn-cook-prev">← Previous</button>
+      <button class="btn-cook" id="btn-cook-next">Next Step →</button>
+    </div>
+  </div>
 
-        <main class="main">
-            <header id="start">
-                <h1>Brownie</h1>
-                <h3>The perfect recipe for rich, chocolately and fudgy brownies.</h3>
-            </header>
-
-            <section id="intro">
-                <img class ="responsive-image" src="../images/brownie_image.jpg" alt="A delicious looking piece of brownie">
-                <h4>Indulge in the ultimate chocolate treat with this rich and fudgy brownie recipe! Perfectly chewy on the edges and irresistibly gooey in the center, these homemade brownies are a chocolate lover's dream come true. Whether you're baking for a special occasion or just because, this simple recipe will have you enjoying delicious, bakery-style brownies right at home.</h4>
-                <h4>Get ready to bring pure chocolate bliss to your kitchen!</h4>
-            </section>
-
-            <section id="ingredients">
-                <h2>Ingredients</h2>
-                <div class="responsive-table">
-                    <table class="border1">
-                        <tr>
-                            <th colspan="2">Lasagna</th>
-                        </tr>
-                        <tr>
-                            <td><p><b>Prep Time:</b><br>15 mins</p></td>
-                            <td><p><b>Cook Time:</b><br>30 mins</p></td>
-                        </tr>
-                        
-                        <tr>
-                            <td><p><b>Total Time:</b><br>45 mins</p></td>
-                            <td><p id="serv"><b>Serving Size:</b><br>9 persons</p></td>
-                        </tr>
-                        
-                        <tr>
-                            <th colspan="2">Ingredients</th>
-                        </tr>
-                        <tr>
-                            <td>Black chocolate - 240g</td>
-                            <td>Vanilla extract - 2 tsp</td>
-                        </tr>
-                        <tr>
-                            <td>Cocoa powder - 75g</td>
-                            <td>Salt - 2 pinches</td>
-                        </tr>
-                        <tr>
-                            <td>Butter - 280g</td>
-                            <td>Eggs - 6</td>
-                        </tr>
-                        <tr>
-                            <td>Sugar - 400g</td>
-                            <td>Flour - 120g</td>
-                        </tr>
-                        <tr>
-                            <td>Brown sugar - 100g</td>
-                            <td>&nbsp;</td>
-                        </tr>
-                    </table>
-                    </div>
-            </section>
-
-            <section id="steps">
-                <h2>Preparation</h2>
-                <ol class="style1">
-                    <li>Melt the butter. In the meantime cut the chocolate finely and add it in a bowl with 25g of cocoa powder. Add the melted butter and wisk until smooth</li>
-                    <li>In a larger bowl add all the sugar, the vanilla extract, the salt, one egg and mix. Then add 2 more eggs and mix. At last add the remaining eggs and mix for a few minutes.</li>
-                    <li>Add the chocolate-butter mixture and mix. Now add the flour and 50g of cocoa powder and mix the batter lightly with a spatula.</li>
-                    <li>Lastly, pop the mixture in the oven at 180°C for about 35 minutes for a fudgy consistency.</li>
-                </ol>
-            </section>
-
-            <section id="video">
-                <h2>Video</h2>
-                <p>Here's a short video of the recipe to help you out:</p>
-                <div class="video-container">
-                    <iframe class="responsive-iframe" src="https://www.youtube.com/embed/VvJm4pQZ04s" title="The Best Brownies You&#39;ll Ever Eat" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </section>
-
-            <section id="galery">
-                <h2 >Galery</h2>
-                <div class="galery-container">
-                    <div class="image1">
-                        <img class ="responsive-image" src="../images/brownie-1.jpg" alt="A delicious looking slice of lasagna">
-                    </div> 
-                    <!-- https://www.loveandlemons.com/brownies-recipe/ image 1-4 -->
-                    <div class="image2">
-                        <img class ="responsive-image" src="../images/brownie-2.jpg" alt="A delicious looking slice of lasagna">
-                    </div>
-                    <!-- https://bakerbynature.com/the-best-cocoa-fudge-brownies/ -->
-                    <div class="image3">
-                        <img class ="responsive-image" src="../images/brownie-4.jpg" alt="A delicious looking slice of lasagna">
-                    </div>
-                    <div class="image4">
-                        <img class ="responsive-image" src="../images/brownie-3.jpg" alt="A delicious looking slice of lasagna">
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="item-1">
-                <a href="homepage.html" class="logo">
-                    <img src="../images/bun_logo_3-removebg.png" alt="page logo">
-                </a>
-                <p>Welcome to Paul's Cooksite! This is a place where food lovers of all levels can explore, create, and enjoy the art of cooking. From quick weekday meals to decadent desserts, we bring you easy-to-follow recipes with a dash of inspiration. Our blog is filled with cooking tips, ingredient insights, and kitchen hacks to help you feel confident in the kitchen.</p>
-            </div>
-            <div class="item-2">
-                <h2>Bon Appétit!</h2>
-                <h3>And don't forget to follow us on:</h3>
-                <div class="sm-links">
-                    <a href=""><img src="../images/youtube.png" alt=""></a>
-                    <a href=""><img src="../images/instagram.png" alt=""></a>
-                    <a href=""><img src="../images/facebook.png" alt=""></a>
-                    <a href=""><img src="../images/github.png" alt=""></a>
-                </div>
-            </div>
-        </footer>
-
-        <aside class="go-to-start">
-            <div class="animation-box">
-                <a href="#navigation">To the top!</a>
-            </div>
-        </aside>
-    </body>
-
-    <script src="../js/functionality.js"></script>
-    <script src="../js/login_session.js"></script>
+  <script src="../js/recipes.js"></script>
+  <script src="../js/main.js"></script>
+</body>
 </html>

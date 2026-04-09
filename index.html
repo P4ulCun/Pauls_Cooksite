@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paul's Cooksite - Home</title>
+  <meta name="description" content="Explore mouthwatering recipes, cooking tips, and food stories to elevate your home cooking with Paul's Cooksite.">
+  <link rel="icon" href="images/cutlery.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="nav_container" id="navigation">
+    <a href="index.html" class="logo">
+      <img src="images/bun_logo_1-removebg.png" alt="Paul's Cooksite Logo">
+    </a>
+
+    <!-- SEARCH -->
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search recipes or ingredients..." autocomplete="off">
+      <div class="result-box" id="search-results"></div>
+    </div>
+
+    <!-- BURGER MENU -->
+    <div class="nav-burger">
+      <button id="nav-button" aria-label="Toggle Navigation"></button>
+    </div>
+
+    <!-- MENU LINKS -->
+    <div class="menu" id="nav-menu">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#recipes-section">Recipes</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="hero" id="welcome">
+    <div class="overlay">
+      <h1>Paul's Cooksite</h1>
+      <p>Your daily dose of culinary inspiration. Explore mouthwatering recipes to elevate your home cooking.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" id="recipes-section">
+      <!-- FILTERS -->
+      <div class="filters" id="tag-filters">
+        <!-- Rendered via JS -->
+      </div>
+
+      <!-- RECIPE GRID -->
+      <div class="recipe-grid" id="recipe-grid">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="item-1">
+      <a href="index.html" class="logo">
+        <img src="images/bun_logo_3-removebg.png" alt="Paul's Cooksite Footer Logo">
+      </a>
+      <p>Welcome to Paul's Cooksite! This is a place where food lovers of all levels can explore, create, and enjoy the art of cooking. From quick weekday meals to decadent desserts, we bring you easy-to-follow recipes with a dash of inspiration.</p>
+    </div>
+    <div class="item-2">
+      <h2>Bon Appétit!</h2>
+      <h3>Follow us on:</h3>
+      <div class="sm-links">
+        <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="images/github.png" alt="GitHub"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/recipes.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
