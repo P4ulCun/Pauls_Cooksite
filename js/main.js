@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let basePath = '';
   // Simple check for path depth (e.g., in /html/ or /)
   if (window.location.pathname.includes('/html/')) {
-    basePath = '../';
+    basePath = '../../';
   }
 
   if (searchInput && searchResults) {
@@ -76,14 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (byTitle.length > 0) {
         html += '<div class="search-section">Recipes</div>';
         byTitle.forEach(r => {
-          const path = basePath ? `${basePath}html/${r.id}-recipe.html` : `html/${r.id}-recipe.html`;
+          const path = basePath ? `${basePath}html/${r.folder}/${r.id}-recipe.html` : `html/${r.folder}/${r.id}-recipe.html`;
           html += `<a href="${path}" class="search-item">${r.title}</a>`;
         });
       }
       if (filteredByIngredient.length > 0) {
         html += '<div class="search-section">By Ingredient</div>';
         filteredByIngredient.forEach(r => {
-          const path = basePath ? `${basePath}html/${r.id}-recipe.html` : `html/${r.id}-recipe.html`;
+          const path = basePath ? `${basePath}html/${r.folder}/${r.id}-recipe.html` : `html/${r.folder}/${r.id}-recipe.html`;
           html += `<a href="${path}" class="search-item">${r.title}</a>`;
         });
       }
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Generate Cards
     recipes.forEach(r => {
       const card = document.createElement('a');
-      card.href = basePath ? `${basePath}html/${r.id}-recipe.html` : `html/${r.id}-recipe.html`;
+      card.href = basePath ? `${basePath}html/${r.folder}/${r.id}-recipe.html` : `html/${r.folder}/${r.id}-recipe.html`;
       card.className = 'recipe-card';
       card.dataset.tags = r.tags.join(',');
       
