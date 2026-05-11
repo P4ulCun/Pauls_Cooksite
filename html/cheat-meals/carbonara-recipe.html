@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carbonara - Paul's Cooksite</title>
   <meta name="description" content="Cheesy, rich and silky smooth Carbonara pasta">
-  <link rel="icon" href="../../images/brownie.png">
+  <link rel="icon" href="../../images/cutlery.png">
   <link rel="stylesheet" href="../../css/style.css">
 </head>
+
 <body data-recipe-id="carbonara">
   <!-- NAVIGATION -->
   <nav class="nav_container" id="navigation">
@@ -37,7 +39,9 @@
 
     <img class="recipe-image-large" src="../../images/carbonara_image.jpg" alt="Carbonara">
 
-    <div class="recipe-intro"><p>Cheesy, rich and silky smooth Carbonara pasta</p></div>
+    <div class="recipe-intro">
+      <p>Cheesy, rich and silky smooth Carbonara pasta</p>
+    </div>
 
     <div class="recipe-content">
       <!-- INFO TABLE -->
@@ -72,13 +76,15 @@
       <!-- INGREDIENTS AREA -->
       <section id="ingredients-section">
         <h2>Ingredients</h2>
-        
+
         <table class="ingredients-table hide-in-shopping" id="ingredients-table">
-          <tr><th colspan="2">Ingredients List</th></tr>
+          <tr>
+            <th colspan="2">Ingredients List</th>
+          </tr>
         </table>
 
         <ul class="shopping-checklist" style="display: none;" id="shopping-checklist"></ul>
-        
+
         <div id="shopping-mode-controls" style="display: none; margin-top: 1rem; gap: 1rem;">
           <button class="btn-action" id="btn-shopping-clear">Clear All</button>
           <button class="btn-action units-toggle" id="btn-shopping-exit">Exit Shopping Mode</button>
@@ -87,14 +93,15 @@
 
       <!-- STEPS AREA -->
       <section id="steps" class="hide-in-shopping">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
           <h2 style="margin: 0;">Preparation</h2>
           <button class="btn-action" id="btn-cook-mode">Cook Mode</button>
         </div>
         <ul class="steps-list" id="steps-list"></ul>
       </section>
-      
-      
+
+
     </div>
   </main>
 
@@ -121,7 +128,9 @@
   <div class="cook-mode-overlay" id="cook-mode-overlay" style="display: none;">
     <div class="cook-mode-header">
       <h3 style="font-family: var(--font-heading);">Cook Mode</h3>
-      <div class="progress-bar"><div class="progress-fill" id="cook-progress"></div></div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="cook-progress"></div>
+      </div>
       <button class="btn-icon" id="btn-cook-exit" style="background: transparent; border: 1px solid white;">X</button>
     </div>
     <div class="cook-step-content">
@@ -137,4 +146,5 @@
   <script src="../../js/recipes.js"></script>
   <script src="../../js/main.js"></script>
 </body>
+
 </html>
