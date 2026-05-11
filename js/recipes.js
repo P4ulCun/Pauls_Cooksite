@@ -750,4 +750,465 @@ const recipes = [
       "Serve with a side of rice."
     ]
   }
+  ,
+  {
+    "id": "creamy-mushroom-chicken",
+    "folder": "healthy-recipes",
+    "title": "Creamy Mushroom Chicken (Ciulama)",
+    "description": "A creamy and savory chicken and mushroom dish with herbs.",
+    "image": "images/ciulama.jpg",
+    "tags": [
+      "All",
+      "Dinner",
+      "Chicken"
+    ],
+    "prepTime": 10,
+    "cookTime": 20,
+    "totalTime": 30,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "Mushrooms",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "name": "Chicken breast",
+        "amount": 0.5,
+        "unit": ""
+      },
+      {
+        "name": "Sour cream",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Rosemary",
+        "amount": 0,
+        "unit": "to taste"
+      },
+      {
+        "name": "Parsley",
+        "amount": 0,
+        "unit": "to taste"
+      },
+      {
+        "name": "Oregano",
+        "amount": 0,
+        "unit": "to taste"
+      },
+      {
+        "name": "Pepper",
+        "amount": 0,
+        "unit": "to taste"
+      },
+      {
+        "name": "Salt",
+        "amount": 0,
+        "unit": "to taste"
+      }
+    ],
+    "steps": [
+      "Chop the chicken breast and mushrooms.",
+      "Cook the chicken in a pan until browned.",
+      "Add the mushrooms and cook until soft.",
+      "Stir in the sour cream and herbs. Simmer for a few minutes.",
+      "Season with salt and pepper to taste."
+    ]
+  },
+  {
+    "id": "baked-feta-pasta",
+    "folder": "healthy-recipes",
+    "title": "Baked Feta Pasta",
+    "description": "Viral baked feta pasta with cherry tomatoes and herbs.",
+    "image": "images/feta_pasta.avif",
+    "tags": [
+      "All",
+      "Dinner",
+      "Pasta",
+      "Vegetarian"
+    ],
+    "prepTime": 5,
+    "cookTime": 30,
+    "totalTime": 35,
+    "servings": 2,
+    "ingredients": [
+      {
+        "name": "Cherry tomatoes",
+        "amount": 250,
+        "unit": "g"
+      },
+      {
+        "name": "Feta cheese",
+        "amount": 150,
+        "unit": "g"
+      },
+      {
+        "name": "Spaghetti",
+        "amount": 140,
+        "unit": "g"
+      },
+      {
+        "name": "Garlic",
+        "amount": 0.5,
+        "unit": "head"
+      },
+      {
+        "name": "Italian herbs",
+        "amount": 0,
+        "unit": "to taste"
+      },
+      {
+        "name": "Salt",
+        "amount": 0,
+        "unit": "to taste"
+      },
+      {
+        "name": "Pepper",
+        "amount": 0,
+        "unit": "to taste"
+      }
+    ],
+    "steps": [
+      "Preheat oven to 200\u00b0C.",
+      "Place cherry tomatoes and the half head of garlic in a baking dish. Place feta in the center.",
+      "Drizzle with oil and sprinkle with Italian herbs, salt, and pepper.",
+      "Bake for 30 minutes.",
+      "Boil the spaghetti until al dente.",
+      "Mash the baked feta and tomatoes together into a sauce, squeeze out the roasted garlic, and mix in the pasta."
+    ]
+  },
+  {
+    "id": "raspberry-lemonade",
+    "folder": "desserts",
+    "title": "Raspberry Lemonade",
+    "description": "Refreshing and tart homemade raspberry lemonade.",
+    "image": "images/raspberry-lemonade.jpg",
+    "tags": [
+      "All",
+      "Drinks",
+      "Sweet"
+    ],
+    "prepTime": 10,
+    "cookTime": 0,
+    "totalTime": 10,
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Raspberries",
+        "amount": 125,
+        "unit": "g"
+      },
+      {
+        "name": "Lemons",
+        "amount": 6,
+        "unit": ""
+      },
+      {
+        "name": "Water",
+        "amount": 500,
+        "unit": "ml"
+      },
+      {
+        "name": "Sugar",
+        "amount": 100,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "Juice the lemons.",
+      "Blend the raspberries and strain them to remove seeds.",
+      "Mix the lemon juice, raspberry puree, water, and sugar.",
+      "Taste and adjust with more water or lemon if needed. Serve chilled."
+    ]
+  },
+  {
+    "id": "tzatziki",
+    "folder": "healthy-recipes",
+    "title": "Tzatziki",
+    "description": "Fresh and creamy Greek yogurt sauce.",
+    "image": "images/tzatziki.jpg",
+    "tags": [
+      "All",
+      "Sauce",
+      "Vegetarian"
+    ],
+    "prepTime": 10,
+    "cookTime": 0,
+    "totalTime": 10,
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Greek yogurt",
+        "amount": 200,
+        "unit": "g"
+      },
+      {
+        "name": "Cucumber",
+        "amount": 1,
+        "unit": ""
+      },
+      {
+        "name": "Dill",
+        "amount": 0,
+        "unit": "to taste"
+      },
+      {
+        "name": "Lemon juice",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Curry powder",
+        "amount": 1,
+        "unit": "pinch"
+      }
+    ],
+    "steps": [
+      "Grate the cucumber and squeeze out excess water.",
+      "Mix the cucumber with Greek yogurt, chopped dill, lemon juice, and a pinch of curry powder.",
+      "Let it rest in the fridge for flavors to meld."
+    ]
+  },
+  {
+    "id": "homemade-muesli",
+    "folder": "healthy-recipes",
+    "title": "Homemade Muesli",
+    "description": "Healthy homemade muesli with peanut butter and nuts.",
+    "image": "images/muesli.jpg",
+    "tags": [
+      "All",
+      "Breakfast",
+      "Healthy"
+    ],
+    "prepTime": 5,
+    "cookTime": 0,
+    "totalTime": 5,
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Peanut butter",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Maple or Agave syrup",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Mixed nuts",
+        "amount": 50,
+        "unit": "g"
+      },
+      {
+        "name": "Raisins",
+        "amount": 30,
+        "unit": "g"
+      },
+      {
+        "name": "Rolled oats (placeholder)",
+        "amount": 200,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "In a bowl, mix rolled oats, mixed nuts, and raisins.",
+      "Melt the peanut butter slightly and mix with the syrup.",
+      "Combine the wet and dry ingredients.",
+      "Store in an airtight container and serve with milk or yogurt."
+    ]
+  },
+  {
+    "id": "korean-drug-eggs",
+    "folder": "healthy-recipes",
+    "title": "Korean Drug Eggs",
+    "description": "Addictive soy-marinated soft boiled eggs.",
+    "image": "images/korean_eggs.jpg",
+    "tags": [
+      "All",
+      "Snack",
+      "Asian"
+    ],
+    "prepTime": 10,
+    "cookTime": 7,
+    "totalTime": 17,
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Eggs",
+        "amount": 6,
+        "unit": ""
+      },
+      {
+        "name": "Green onion",
+        "amount": 2,
+        "unit": "stalks"
+      },
+      {
+        "name": "Red/green pepper",
+        "amount": 1,
+        "unit": ""
+      },
+      {
+        "name": "Honey",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Sesame seeds",
+        "amount": 1,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Soy sauce",
+        "amount": 100,
+        "unit": "ml"
+      },
+      {
+        "name": "Garlic",
+        "amount": 3,
+        "unit": "cloves"
+      },
+      {
+        "name": "Water",
+        "amount": 100,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Boil the eggs for exactly 6-7 minutes for a soft yolk, then plunge into an ice bath and peel.",
+      "Chop the green onions, peppers, and garlic.",
+      "In a container, mix soy sauce, water, honey, sesame seeds, and the chopped vegetables to make the marinade.",
+      "Submerge the peeled eggs in the marinade and refrigerate overnight."
+    ]
+  },
+  {
+    "id": "tabbouleh",
+    "folder": "healthy-recipes",
+    "title": "Tabbouleh",
+    "description": "Fresh and vibrant parsley and bulgur salad.",
+    "image": "images/tabbouleh.jpg",
+    "tags": [
+      "All",
+      "Salad",
+      "Vegetarian"
+    ],
+    "prepTime": 20,
+    "cookTime": 15,
+    "totalTime": 35,
+    "servings": 4,
+    "ingredients": [
+      {
+        "name": "Bulgur",
+        "amount": 100,
+        "unit": "g"
+      },
+      {
+        "name": "Green onion",
+        "amount": 1,
+        "unit": "bunch"
+      },
+      {
+        "name": "Parsley",
+        "amount": 6,
+        "unit": "bunches"
+      },
+      {
+        "name": "Mint",
+        "amount": 3,
+        "unit": "sprigs"
+      },
+      {
+        "name": "Olive oil",
+        "amount": 3,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Pomegranate juice",
+        "amount": 2,
+        "unit": "tbsp"
+      },
+      {
+        "name": "Salt",
+        "amount": 0,
+        "unit": "to taste"
+      }
+    ],
+    "steps": [
+      "Cook or soak the bulgur according to package instructions until tender, then drain and cool.",
+      "Finely chop the parsley, mint, and green onions.",
+      "Mix the herbs with the cooled bulgur.",
+      "Dress with olive oil, pomegranate juice, and salt to taste."
+    ]
+  },
+  {
+    "id": "english-muffins",
+    "folder": "cheat-meals",
+    "title": "English Muffins",
+    "description": "Homemade classic English muffins cooked in a pan.",
+    "image": "images/english_muffins.jpg",
+    "tags": [
+      "All",
+      "Baking",
+      "Breakfast"
+    ],
+    "prepTime": 30,
+    "cookTime": 10,
+    "totalTime": 220,
+    "servings": 12,
+    "ingredients": [
+      {
+        "name": "Flour",
+        "amount": 625,
+        "unit": "g"
+      },
+      {
+        "name": "Sugar",
+        "amount": 18,
+        "unit": "g"
+      },
+      {
+        "name": "Salt",
+        "amount": 10,
+        "unit": "g"
+      },
+      {
+        "name": "Dry yeast",
+        "amount": 7,
+        "unit": "g"
+      },
+      {
+        "name": "Butter",
+        "amount": 40,
+        "unit": "g"
+      },
+      {
+        "name": "Milk",
+        "amount": 300,
+        "unit": "ml"
+      },
+      {
+        "name": "Water",
+        "amount": 135,
+        "unit": "ml"
+      },
+      {
+        "name": "Cornmeal (malai)",
+        "amount": 0,
+        "unit": "to coat"
+      }
+    ],
+    "steps": [
+      "Whisk together flour, sugar, salt, and dry yeast.",
+      "Mix in the room temperature butter with your fingers until it has a mealy texture.",
+      "Add lukewarm milk and water, and mix by hand to form a dough.",
+      "Pull the edges of the dough to the center, let it rest. Repeat this folding process 3 times at 15-minute intervals.",
+      "Let the dough rise for 1 hour.",
+      "Divide the dough into 12 pieces, shape into balls, and flatten them. Coat with cornmeal (malai).",
+      "Let them rise again for 1 hour on a lined baking sheet.",
+      "Cook in a pan for 4-6 minutes per side.",
+      "Let rest overnight for best texture before slicing."
+    ]
+  }
 ];
